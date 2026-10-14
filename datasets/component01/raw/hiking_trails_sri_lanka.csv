@@ -1,0 +1,14 @@
+Trail_ID,Trail_Name,Distance_KM,Elevation_Gain_M,Base_Difficulty,Scenic_Features,Terrain_Type,Avg_Completion_Time_Hours,Start_Lat,Start_Lon,End_Lat,End_Lon,GPX_File_Path,Region,Social_Search_Query,Steep_Start_KM,Steep_End_KM
+1,Little Adam's peak,4.5,120,Easy,"Panoramic Mountain Views, Tea Estates","Paved Steps, Dirt Path",1.5,6.8722,81.0611,6.8685,81.0665,routes/TR002_little_adams_peak.gpx,Badulla (Ella),Little Adams Peak Ella hike,1.8,2.8
+2,Pidurangala,2.5,160,Moderate,"Panoramic Mountain Views, Historic / Cultural Sites, Dense Forests","Rock Steps, Forest Trail",1.5,7.962,80.7634,7.9652,80.7631,routes/TR007_pidurangala.gpx,Matale (Sigiriya),Pidurangala Rock hike,1.8,2.5
+3,Kirigalpoththa,13.0,380,Hard,"Dense Forests, Waterfalls, Panoramic Mountain Views","Bog, Rocky, Forest Trail",5.5,6.7972,80.8094,6.7915,80.7716,routes/TR009_kirigalpoththa.gpx,Nuwara Eliya (Horton Plains),Kirigalpoththa hike,8.5,11.0
+4,Hanthana,8.0,420,Moderate,"Panoramic Mountain Views, Tea Estates","Grassland, Rocky",4.0,7.2536,80.6276,7.241,80.6123,routes/TR010_hanthana.gpx,Kandy,Hanthana Mountain hike,3.5,6.0
+5,Bathalegala,4.0,280,Moderate,"Panoramic Mountain Views, Historic / Cultural Sites","Rock Steps, Forest Trail",2.5,7.1852,80.4431,7.191,80.4435,routes/TR013_bathalegala.gpx,Kegalle,Bible Rock Bathalegala hike,2.0,3.5
+6,Alagalla,6.5,580,Hard,"Panoramic Mountain Views, Dense Forests","Steep Rock, Grassland",4.5,7.2882,80.4687,7.2915,80.456,routes/TR014_alagalla.gpx,Kandy / Kegalle,Alagalla Mountain hike,4.5,6.0
+7,Thotupala kanda,4.0,150,Easy,"Panoramic Mountain Views, Dense Forests","Shrub Forest, Dirt Path",2.0,6.8245,80.8174,6.8322,80.8251,routes/TR016_thotupola.gpx,Nuwara Eliya (Horton Plains),Thotupola Kanda hike,2.5,3.5
+8,Lakegala,4.5,850,Hard,"Panoramic Mountain Views, Dense Forests","Extremely Steep Rock, Forest",6.0,7.4475,80.8655,7.4561,80.868,routes/TR019_lakegala.gpx,Matale (Meemure),Lakegala Meemure climb,2.5,4.5
+9,Narangala,7.0,520,Moderate,"Panoramic Mountain Views, Tea Estates, Grassland","Grassland, Dirt Path",4.0,6.9631,80.985,6.9745,80.9782,routes/TR022_narayangala.gpx,Badulla,Narangala hike,4.0,5.5
+10,Sigiriya,1.2,200,Moderate,"Historic / Cultural Sites, Panoramic Mountain Views","Rock Steps, Steep Stairs",1.5,7.957,80.7603,7.957,80.7603,assets/gpx/sigiriya.gpx,Matale,Sigiriya Rock hike,0.5,1.2
+11,Manigala,8.5,450,Moderate,"Panoramic Mountain Views, Dense Forests, Waterfalls","Forest Trail, Rocky, Steep",5.0,7.5452,80.7663,7.5452,80.7663,assets/gpx/manigala.gpx,Matale,Manigala hike Knuckles,2.0,3.5
+12,Pettigala,6.0,350,Moderate,"Panoramic Mountain Views, Dense Forests","Jungle, Pine Forest, Rock",4.0,6.7828,80.6472,6.7828,80.6472,assets/gpx/pettigala.gpx,Kandy,Pettigala hike,1.5,2.5
+13,peacock hills,2.0,180,Easy,"Panoramic Mountain Views, Tea Estates","Gravel, Tea Estate Paths",1.5,7.0734,80.5956,7.0734,80.5956,assets/gpx/peacock_hills.gpx,Nuwara Eliya Kandy,Peacock Hills Pussellawa,0.8,1.5
