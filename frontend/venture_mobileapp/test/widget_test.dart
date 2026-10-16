@@ -8,11 +8,16 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
 
-import 'package:venture_mobileapp/main.dart';
+import 'package:venture_mobileapp/models/component02/hazard_data.dart';
+import 'package:venture_mobileapp/screens/component02/trip_planning.dart';
+import 'package:venture_mobileapp/services/api_service.dart';
 
 void main() {
   testWidgets('Trip planning screen smoke test', (WidgetTester tester) async {
-    await tester.pumpWidget(const VentureForecastApp());
+    await tester.pumpWidget(
+      MaterialApp(home: Screen1TripPlanning(apiService: _FakeApiService())),
+    );
+    await tester.pumpAndSettle();
 
     expect(find.text('Hazard & Weather Forecast'), findsOneWidget);
     expect(find.text('Plan your hike'), findsOneWidget);
@@ -45,4 +50,25 @@ void main() {
       ],
     );
   });
+}
+
+class _FakeApiService extends ApiService {
+  @override
+  Future<WeatherSummary> getWeather({
+    required String trailName,
+    required DateTime forecastDate,
+  }) async {
+    return WeatherSummary(
+      forecastDate: forecastDate,
+      source: 'Open-Meteo',
+      temperatureC: 30,
+      feelsLikeC: 36,
+      condition: 'Partly cloudy',
+      rainChance: 30,
+      precipitationMm: 2,
+      windSpeedKmh: 12,
+      windGustKmh: 20,
+      humidity: 68,
+    );
+  }
 }

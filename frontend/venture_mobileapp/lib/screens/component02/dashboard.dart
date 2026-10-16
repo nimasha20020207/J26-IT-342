@@ -68,7 +68,10 @@ class Screen3Dashboard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Weather · ${forecast.mode}', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF0B5563))),
+                Text(
+                  'Weather · ${forecast.weather.source} · ${forecast.weather.forecastDate.toIso8601String().split('T').first}',
+                  style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF0B5563)),
+                ),
                 const SizedBox(height: 8),
                 Text(
                   '${forecast.weather.temperatureC.toStringAsFixed(0)}°C · ${forecast.weather.condition} · Feels like ${forecast.weather.feelsLikeC.toStringAsFixed(0)}°C',
@@ -76,7 +79,7 @@ class Screen3Dashboard extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  'Rain ${forecast.weather.rainChance}% · Wind ${forecast.weather.windSpeedKmh} km/h · Humidity ${forecast.weather.humidity}%',
+                  'Rain ${forecast.weather.rainChance}% (${forecast.weather.precipitationMm.toStringAsFixed(1)} mm) · Wind ${forecast.weather.windSpeedKmh.toStringAsFixed(0)} km/h · Gusts ${forecast.weather.windGustKmh.toStringAsFixed(0)} km/h · Humidity ${forecast.weather.humidity}%',
                   style: const TextStyle(fontSize: 12, color: Colors.black54),
                 ),
               ],

@@ -16,11 +16,15 @@ class Hazard(BaseModel):
 
 
 class WeatherSummary(BaseModel):
+    forecast_date: date
+    source: str
     temperature_c: float
     feels_like_c: float
     condition: str
     rain_chance: int
-    wind_speed_kmh: int
+    precipitation_mm: float
+    wind_speed_kmh: float
+    wind_gust_kmh: float
     humidity: int
 
 

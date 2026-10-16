@@ -2,6 +2,7 @@ from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 
 from schemas.component02.forecast import ForecastRequest, ForecastResponse
+from services.component02.weather_service import get_trail_weather
 
 
 def generate_demo_forecast(request: ForecastRequest) -> ForecastResponse:
@@ -28,14 +29,7 @@ def generate_demo_forecast(request: ForecastRequest) -> ForecastResponse:
             {"name": "Wildlife Activity", "probability": 0.50, "severity": "Medium"},
             {"name": "High Leech Activity", "probability": 0.95, "severity": "High"},
         ],
-        weather={
-            "temperature_c": 18,
-            "feels_like_c": 17,
-            "condition": "Partly cloudy",
-            "rain_chance": 30,
-            "wind_speed_kmh": 12,
-            "humidity": 82,
-        },
+        weather=get_trail_weather(request.trail_name, request.start_date),
         recommendation={
             "action": "Proceed with Caution",
             "summary": "Hike with heightened awareness. Expect slippery trails and heavy afternoon fog.",

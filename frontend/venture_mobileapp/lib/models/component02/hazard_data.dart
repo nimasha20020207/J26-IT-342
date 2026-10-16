@@ -40,29 +40,41 @@ class SocialReport {
 }
 
 class WeatherSummary {
+  final DateTime forecastDate;
+  final String source;
   final double temperatureC;
   final double feelsLikeC;
   final String condition;
   final int rainChance;
-  final int windSpeedKmh;
+  final double precipitationMm;
+  final double windSpeedKmh;
+  final double windGustKmh;
   final int humidity;
 
   const WeatherSummary({
+    required this.forecastDate,
+    required this.source,
     required this.temperatureC,
     required this.feelsLikeC,
     required this.condition,
     required this.rainChance,
+    required this.precipitationMm,
     required this.windSpeedKmh,
+    required this.windGustKmh,
     required this.humidity,
   });
 
   factory WeatherSummary.fromJson(Map<String, dynamic> json) => WeatherSummary(
+        forecastDate: DateTime.parse(json['forecast_date'] as String),
+        source: json['source'] as String,
         temperatureC: (json['temperature_c'] as num).toDouble(),
         feelsLikeC: (json['feels_like_c'] as num).toDouble(),
         condition: json['condition'] as String,
-        rainChance: json['rain_chance'] as int,
-        windSpeedKmh: json['wind_speed_kmh'] as int,
-        humidity: json['humidity'] as int,
+        rainChance: (json['rain_chance'] as num).toInt(),
+        precipitationMm: (json['precipitation_mm'] as num).toDouble(),
+        windSpeedKmh: (json['wind_speed_kmh'] as num).toDouble(),
+        windGustKmh: (json['wind_gust_kmh'] as num).toDouble(),
+        humidity: (json['humidity'] as num).toInt(),
       );
 }
 

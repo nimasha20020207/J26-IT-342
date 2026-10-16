@@ -1,0 +1,15 @@
+TRAIL_COORDINATES: dict[str, tuple[float, float]] = {
+    "Pidurangala": (7.9662102, 80.7616977),
+    "Sigiriya": (7.9566634, 80.7599301),
+    "Alagalla": (7.2979754, 80.4715679),
+    "Narangala": (7.0367166, 81.0087047),
+    "Hanthana": (7.2535386, 80.6279647),
+    "Lakegala": (7.4660876, 80.8393578),
+    "Manigala": (7.5201609, 80.7671233),
+    "Kirigalpoththa": (6.7989937, 80.7664235),
+    "Little Adam's peak": (6.8650500, 81.0630167),
+    "Pettigala": (7.2863410, 80.7598155),
+    "Peacock hills": (7.0852774, 80.6327218),
+    "Thotupala kanda": (6.8331199, 80.8197979),
+    "Bathalegala": (7.1900861, 80.4338935),
+}

@@ -14,7 +14,7 @@ The API is available at `http://127.0.0.1:8000`. Interactive endpoint documentat
 
 ## Demo forecast
 
-`POST /api/v1/forecasts` accepts a trail and trip dates. It returns a complete sample forecast with hazards, weather, recommendations, social reports, and risk trends. The response has `mode: "demo"` so the app can identify placeholder results. Replace `generate_demo_forecast` in `services/component02/forecast_service.py` with the model pipeline when it is ready, preserving the response schema or updating the mobile decoder alongside it. Component 02's API routes, schemas, and services are grouped in their respective `component02` subfolders.
+`POST /api/v1/forecasts` accepts a trail and trip dates. It returns demo hazards, recommendations, social reports, and risk trends, together with live weather for the selected trail and start date. Its `mode: "demo"` indicates the hazard/model results are placeholders; the weather has its own `source: "Open-Meteo"` field. Replace `generate_demo_forecast` in `services/component02/forecast_service.py` with the model pipeline when it is ready, preserving the response schema or updating the mobile decoder alongside it. Component 02's API routes, schemas, and services are grouped in their respective `component02` subfolders.
 
 Example body:
 
@@ -27,6 +27,12 @@ Example body:
 ```
 
 `GET /health` returns the API health status.
+
+## Trail weather
+
+`GET /api/v1/weather?trail_name=Pidurangala&forecast_date=2026-10-17` fetches the selected date's daily weather from Open-Meteo. The date must be today through 15 days ahead in Sri Lanka time. The response includes maximum temperature and apparent temperature, condition, maximum precipitation chance and amount, maximum wind and gusts, and noon relative humidity.
+
+Trail coordinates are stored in `services/component02/trail_locations.py`. They are representative summit or trail-area points, not route-wide measurements; verify them against your field/GIS data. Coordinate references were checked against OpenStreetMap data (© OpenStreetMap contributors, ODbL). Open-Meteo's free API is for non-commercial use; review its current terms before deployment.
 
 ## Run the mobile app
 

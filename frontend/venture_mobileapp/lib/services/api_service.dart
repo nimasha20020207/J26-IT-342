@@ -37,6 +37,23 @@ class ApiService {
     return ForecastData.fromJson(data);
   }
 
+  Future<WeatherSummary> getWeather({
+    required String trailName,
+    required DateTime forecastDate,
+  }) async {
+    final response = await _dio.get<Map<String, dynamic>>(
+      '/api/v1/weather',
+      queryParameters: {
+        'trail_name': trailName,
+        'forecast_date': _dateOnly(forecastDate),
+      },
+    );
+
+    final data = response.data;
+    if (data == null) throw const FormatException('The backend returned empty weather data.');
+    return WeatherSummary.fromJson(data);
+  }
+
   static String _dateOnly(DateTime value) =>
       '${value.year.toString().padLeft(4, '0')}-${value.month.toString().padLeft(2, '0')}-${value.day.toString().padLeft(2, '0')}';
 }
