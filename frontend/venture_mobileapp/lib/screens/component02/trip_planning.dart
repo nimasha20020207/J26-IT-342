@@ -162,7 +162,7 @@ class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
                                       children: [
                                         const Icon(Icons.calendar_today, size: 18, color: Color(0xFF0B5563)),
                                         const SizedBox(width: 8),
-                                        Text('${startDate.day} Oct 2026', style: const TextStyle(fontWeight: FontWeight.w600)),
+                                        Text(_formatDate(startDate), style: const TextStyle(fontWeight: FontWeight.w600)),
                                       ],
                                     ),
                                   ),
@@ -194,7 +194,7 @@ class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
                                       children: [
                                         const Icon(Icons.calendar_today, size: 18, color: Color(0xFF0B5563)),
                                         const SizedBox(width: 8),
-                                        Text('${endDate.day} Oct 2026', style: const TextStyle(fontWeight: FontWeight.w600)),
+                                        Text(_formatDate(endDate), style: const TextStyle(fontWeight: FontWeight.w600)),
                                       ],
                                     ),
                                   ),
@@ -290,7 +290,7 @@ class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                                   decoration: BoxDecoration(color: Colors.grey.shade100, borderRadius: BorderRadius.circular(12)),
-                                  child: const Text('Live API', style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
+                                  child: const Text('Demo preview', style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
                                 ),
                               ],
                             ),
@@ -335,7 +335,13 @@ class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const Screen2Processing()),
+                            MaterialPageRoute(
+                              builder: (context) => Screen2Processing(
+                                trailName: selectedTrail,
+                                startDate: startDate,
+                                endDate: endDate,
+                              ),
+                            ),
                           );
                         },
                         child: Row(
@@ -359,6 +365,11 @@ class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
       ),
     );
   }
+}
+
+String _formatDate(DateTime date) {
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return '${date.day} ${months[date.month - 1]} ${date.year}';
 }
 
 class _WeatherMetric extends StatelessWidget {

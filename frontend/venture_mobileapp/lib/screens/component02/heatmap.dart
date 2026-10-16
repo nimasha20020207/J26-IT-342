@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import '../../models/component02/hazard_data.dart';
 import 'temporal_trends.dart';
 
 class Screen4Heatmap extends StatelessWidget {
-  const Screen4Heatmap({super.key});
+  const Screen4Heatmap({super.key, required this.forecast});
+
+  final ForecastData forecast;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +26,7 @@ class Screen4Heatmap extends StatelessWidget {
                 children: [
                   Icon(Icons.map, size: 80, color: Colors.grey.shade400),
                   const SizedBox(height: 12),
-                  Text('Horton Plains Topographical GIS Heatmap', style: TextStyle(color: Colors.grey.shade600, fontWeight: FontWeight.w600)),
+                  Text('${forecast.trailName} risk map · score ${forecast.overallRiskScore}', style: TextStyle(color: Colors.grey.shade600, fontWeight: FontWeight.w600)),
                 ],
               ),
             ),
@@ -79,7 +82,7 @@ class Screen4Heatmap extends StatelessWidget {
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
-                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Screen5TemporalTrends())),
+                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Screen5TemporalTrends(forecast: forecast))),
                       child: const Text('View Temporal Risk Trends', style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                   ),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import '../../models/component02/hazard_data.dart';
 
 class Screen7FinalAssessment extends StatelessWidget {
-  const Screen7FinalAssessment({super.key});
+  const Screen7FinalAssessment({super.key, required this.forecast});
+
+  final ForecastData forecast;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +28,15 @@ class Screen7FinalAssessment extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  children: const [
-                    Icon(Icons.warning_amber_rounded, color: Colors.white, size: 28),
-                    SizedBox(width: 10),
-                    Text('Proceed with Caution', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+                  children: [
+                    const Icon(Icons.warning_amber_rounded, color: Colors.white, size: 28),
+                    const SizedBox(width: 10),
+                    Expanded(child: Text(forecast.recommendationAction, style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold))),
                   ],
                 ),
                 const SizedBox(height: 12),
-                const Text(
-                  'Recommended Action: Hike is permitted with heightened awareness. Expect slippery trails and heavy afternoon fog.',
+                Text(
+                  'Recommended Action: ${forecast.recommendationSummary}',
                   style: TextStyle(color: Colors.white, fontSize: 13, height: 1.4),
                 ),
               ],
@@ -50,12 +53,13 @@ class Screen7FinalAssessment extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text('Assessment Summary', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF0B5563))),
                 SizedBox(height: 12),
-                _SummaryRow(label: 'Predicted Hazard Category', value: 'Slippery Trails & Dense Fog'),
-                _SummaryRow(label: 'Overall Risk Probability', value: '68% (Medium-High)'),
-                _SummaryRow(label: 'Primary Data Fusion Source', value: 'Weather API + BERT Social Signals'),
+                _SummaryRow(label: 'Trail', value: forecast.trailName),
+                _SummaryRow(label: 'Overall Risk', value: '${forecast.overallRiskScore}% (${forecast.riskLevel})'),
+                _SummaryRow(label: 'Forecast source', value: '${forecast.mode} backend response'),
+                _SummaryRow(label: 'Request ID', value: forecast.requestId),
               ],
             ),
           ),
@@ -70,12 +74,10 @@ class Screen7FinalAssessment extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text('Recommended Precautions', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF0B5563))),
                 SizedBox(height: 12),
-                _PrecautionBullet(text: 'Wear anti-leech socks and proper grip hiking boots.'),
-                _PrecautionBullet(text: 'Carry rain gear and portable emergency flashlight for fog.'),
-                _PrecautionBullet(text: 'Complete the loop before 12:00 PM to avoid peak weather risks.'),
+                ...forecast.precautions.map((precaution) => _PrecautionBullet(text: precaution)),
               ],
             ),
           ),

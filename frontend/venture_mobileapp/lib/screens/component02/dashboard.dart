@@ -3,22 +3,12 @@ import '../../models/component02/hazard_data.dart';
 import 'heatmap.dart';
 
 class Screen3Dashboard extends StatelessWidget {
-  const Screen3Dashboard({super.key});
+  const Screen3Dashboard({super.key, required this.forecast});
+
+  final ForecastData forecast;
 
   @override
   Widget build(BuildContext context) {
-    final List<HazardItem> hazards = [
-      HazardItem(name: 'Landslides', probability: 0.65, severity: 'Medium'),
-      HazardItem(name: 'Floods', probability: 0.20, severity: 'Low'),
-      HazardItem(name: 'Slippery Trails', probability: 0.85, severity: 'High'),
-      HazardItem(name: 'Rockfalls', probability: 0.40, severity: 'Medium'),
-      HazardItem(name: 'Dense Fog', probability: 0.90, severity: 'High'),
-      HazardItem(name: 'Lightning', probability: 0.35, severity: 'Low'),
-      HazardItem(name: 'Forest Fires', probability: 0.10, severity: 'Low'),
-      HazardItem(name: 'Wildlife Activity', probability: 0.50, severity: 'Medium'),
-      HazardItem(name: 'High Leech Activity', probability: 0.95, severity: 'High'),
-    ];
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF0B5563),
@@ -27,7 +17,7 @@ class Screen3Dashboard extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.map),
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Screen4Heatmap())),
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Screen4Heatmap(forecast: forecast))),
           ),
         ],
       ),
@@ -46,12 +36,12 @@ class Screen3Dashboard extends StatelessWidget {
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text('Overall Risk Score', style: TextStyle(color: Colors.white70, fontSize: 13)),
                     SizedBox(height: 4),
-                    Text('68 / 100', style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold)),
+                    Text('${forecast.overallRiskScore} / 100', style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold)),
                     SizedBox(height: 4),
-                    Text('Horton Plains · Multi-source fused', style: TextStyle(color: Colors.white60, fontSize: 11)),
+                    Text('Backend ${forecast.mode} forecast', style: TextStyle(color: Colors.white60, fontSize: 11)),
                   ],
                 ),
                 Container(
@@ -60,10 +50,34 @@ class Screen3Dashboard extends StatelessWidget {
                     color: const Color(0xFFF59E0B),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: const Text(
-                    'Medium Risk',
+                  child: Text(
+                    '${forecast.riskLevel} Risk',
                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
                   ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Weather · ${forecast.mode}', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF0B5563))),
+                const SizedBox(height: 8),
+                Text(
+                  '${forecast.weather.temperatureC.toStringAsFixed(0)}°C · ${forecast.weather.condition} · Feels like ${forecast.weather.feelsLikeC.toStringAsFixed(0)}°C',
+                  style: const TextStyle(fontSize: 13),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Rain ${forecast.weather.rainChance}% · Wind ${forecast.weather.windSpeedKmh} km/h · Humidity ${forecast.weather.humidity}%',
+                  style: const TextStyle(fontSize: 12, color: Colors.black54),
                 ),
               ],
             ),
@@ -72,7 +86,7 @@ class Screen3Dashboard extends StatelessWidget {
           const Text('Identified Hazard Probabilities', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF0B5563))),
           const SizedBox(height: 12),
           // Hazards List
-          ...hazards.map((h) => Container(
+          ...forecast.hazards.map((h) => Container(
                 margin: const EdgeInsets.only(bottom: 12),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -145,7 +159,7 @@ class Screen3Dashboard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 14),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             ),
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Screen4Heatmap())),
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Screen4Heatmap(forecast: forecast))),
             child: const Text('View Environmental Risk Heatmap', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],

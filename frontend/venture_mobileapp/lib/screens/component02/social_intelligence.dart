@@ -3,37 +3,12 @@ import '../../models/component02/hazard_data.dart';
 import 'final_assessment.dart';
 
 class Screen6SocialIntelligence extends StatelessWidget {
-  const Screen6SocialIntelligence({super.key});
+  const Screen6SocialIntelligence({super.key, required this.forecast});
+
+  final ForecastData forecast;
 
   @override
   Widget build(BuildContext context) {
-    final List<SocialReport> reports = [
-      SocialReport(
-        source: 'News Article (Daily News LK)',
-        type: 'News',
-        content: 'Heavy mist and sudden downpours reported across Horton Plains plateau. Visitors advised caution.',
-        timeAgo: '2 hours ago',
-        reliabilityScore: 0.94,
-        confidenceIndicator: 'High Confidence',
-      ),
-      SocialReport(
-        source: 'Hiker Review (@kamal_hikes)',
-        type: 'Hiker Report',
-        content: 'Very slippery near World\'s End drop. High leech activity near the forested trail segment.',
-        timeAgo: '4 hours ago',
-        reliabilityScore: 0.88,
-        confidenceIndicator: 'Moderate Confidence',
-      ),
-      SocialReport(
-        source: 'Local Guide Report',
-        type: 'Hiker Report',
-        content: 'Fallen branch blocking secondary track. Main trail is clear but foggy.',
-        timeAgo: 'Yesterday',
-        reliabilityScore: 0.96,
-        confidenceIndicator: 'High Confidence',
-      ),
-    ];
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF0B5563),
@@ -45,7 +20,7 @@ class Screen6SocialIntelligence extends StatelessWidget {
         children: [
           const Text('Extracted News & Hiker Signals (BERT Verified)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF0B5563))),
           const SizedBox(height: 12),
-          ...reports.map((r) => Container(
+          ...forecast.socialReports.map((r) => Container(
                 margin: const EdgeInsets.only(bottom: 14),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -102,7 +77,7 @@ class Screen6SocialIntelligence extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 14),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             ),
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Screen7FinalAssessment())),
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Screen7FinalAssessment(forecast: forecast))),
             child: const Text('View Final Risk Assessment', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],
