@@ -9,16 +9,24 @@ class Screen1TripPlanning extends StatefulWidget {
 }
 
 class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
-  String selectedTrail = 'Horton Plains National Park';
+  String selectedTrail = 'Pidurangala';
   DateTime startDate = DateTime(2026, 10, 17);
   DateTime endDate = DateTime(2026, 10, 17);
 
   final List<String> trails = [
-    'Horton Plains National Park',
-    'Adam\'s Peak (Sri Pada)',
-    'Knuckles Mountain Range',
-    'Ella Rock Trail',
-    'Pidurutalagala Trail'
+    'Pidurangala',
+    'Sigiriya',
+    'Alagalla',
+    'Narangala',
+    'Hanthana',
+    'Lakegala',
+    'Manigala',
+    'Kirigalpoththa',
+    'Little Adam\'s peak',
+    'Pettigala',
+    'Peacock hills',
+    'Thotupala kanda',
+    'Bathalegala',
   ];
 
   @override
@@ -219,12 +227,16 @@ class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
                               children: [
                                 ClipRRect(
                                   borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-                                  child: Container(
+                                  child: Image.asset(
+                                    _trailImagePath(selectedTrail),
                                     height: 120,
                                     width: double.infinity,
-                                    color: const Color(0xFF0B5563).withOpacity(0.2),
-                                    child: const Center(
-                                      child: Icon(Icons.image, size: 48, color: Color(0xFF0B5563)),
+                                    fit: BoxFit.cover,
+                                    errorBuilder: (context, error, stackTrace) => const ColoredBox(
+                                      color: Color(0xFF0B5563),
+                                      child: Center(
+                                        child: Icon(Icons.image, size: 48, color: Colors.white),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -370,6 +382,14 @@ class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
 String _formatDate(DateTime date) {
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   return '${date.day} ${months[date.month - 1]} ${date.year}';
+}
+
+String _trailImagePath(String trail) {
+  final filename = trail
+      .toLowerCase()
+      .replaceAll("'", '')
+      .replaceAll(RegExp(r'\s+'), '-');
+  return 'assets/component02/$filename.jpg';
 }
 
 class _WeatherMetric extends StatelessWidget {
