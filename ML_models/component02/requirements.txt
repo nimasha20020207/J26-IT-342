@@ -1,9 +1,12 @@
 pandas
+openpyxl
 numpy
 bertopic
 sentence-transformers
+transformers
+torch
+scikit-learn
 umap-learn
 hdbscan
-spacy
 plotly
-scikit-learn
+safetensors
