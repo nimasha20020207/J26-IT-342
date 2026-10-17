@@ -1,5 +1,5 @@
 
-# {
+# Example configuration (commented out):
 #   "metadata": {
 #     "purpose": "Experimental weather-only hazard indicators",
 #     "operational_warning_system": false,

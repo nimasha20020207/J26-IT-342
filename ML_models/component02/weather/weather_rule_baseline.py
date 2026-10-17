@@ -5,12 +5,13 @@ import json
 import pandas as pd
 
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
+WEATHER_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = BASE_DIR / "outputs"
 
 FEATURE_FILE = OUTPUT_DIR / "weather_features.csv"
-CONFIG_FILE = BASE_DIR / "weather_rule_config.json"
-CONFIG_FALLBACK_FILE = BASE_DIR / "weather_rule_config.py"
+CONFIG_FILE = WEATHER_DIR / "weather_rule_config.json"
+CONFIG_FALLBACK_FILE = WEATHER_DIR / "weather_rule_config.py"
 OUTPUT_FILE = OUTPUT_DIR / "weather_rule_baseline.csv"
 
 BASELINE_TYPE = "weather_rule_baseline"

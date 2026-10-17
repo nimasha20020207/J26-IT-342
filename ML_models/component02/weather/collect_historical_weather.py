@@ -202,8 +202,8 @@ HOURLY_VARIABLES = [
     "weather_code",
 ]
 
-# Output directory, relative to this script's working directory.
-OUTPUT_DIR = Path("data")
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = BASE_DIR / "data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 OUTPUT_FILE = OUTPUT_DIR / "weather_observations.csv"
@@ -371,4 +371,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
