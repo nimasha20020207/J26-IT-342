@@ -9,20 +9,33 @@ DATA_DIR = BASE_DIR / "data"
 OUTPUT_DIR = BASE_DIR / "outputs"
 
 WEATHER_FILE = DATA_DIR / "weather_observations.csv"
-TERRAIN_FILE = DATA_DIR / "trail_terrain.csv"
+TERRAIN_CSV_FILE = DATA_DIR / "trail_terrain.csv"
+TERRAIN_EXCEL_FILE = DATA_DIR / "trail_terrain.xlsx"
 OUTPUT_FILE = OUTPUT_DIR / "weather_features.csv"
+
+
+def load_terrain():
+    if TERRAIN_CSV_FILE.is_file():
+        return pd.read_csv(TERRAIN_CSV_FILE)
+
+    if TERRAIN_EXCEL_FILE.is_file():
+        return pd.read_excel(TERRAIN_EXCEL_FILE)
+
+    raise FileNotFoundError(
+        "Missing terrain data. Expected "
+        f"{TERRAIN_CSV_FILE} or {TERRAIN_EXCEL_FILE}."
+    )
 
 
 def build_weather_features():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     weather = pd.read_csv(WEATHER_FILE)
-    terrain = pd.read_csv(TERRAIN_FILE)
+    terrain = load_terrain()
 
     required_weather = {
         "trail_id",
         "timestamp",
-        "rainfall_mm",
     }
     required_terrain = {
         "trail_id",
@@ -39,6 +52,14 @@ def build_weather_features():
         raise ValueError(
             f"Missing weather columns: {sorted(missing_weather)}"
         )
+
+    if "rainfall_mm" not in weather.columns:
+        if "rain_mm" not in weather.columns:
+            raise ValueError(
+                "Missing weather rainfall column: expected "
+                "'rainfall_mm' or 'rain_mm'."
+            )
+        weather = weather.rename(columns={"rain_mm": "rainfall_mm"})
 
     if missing_terrain:
         raise ValueError(
@@ -157,7 +178,14 @@ def build_weather_features():
     result["terrain_match"] = result["_merge"].eq("both")
     result = result.drop(columns="_merge")
 
-    result.to_csv(OUTPUT_FILE, index=False)
+    try:
+        result.to_csv(OUTPUT_FILE, index=False)
+    except PermissionError as error:
+        raise PermissionError(
+            f"Cannot write {OUTPUT_FILE}. Close the file if it is open "
+            "in Excel or another program, and check that the output "
+            "directory is writable."
+        ) from error
 
     print(f"Saved engineered features to: {OUTPUT_FILE}")
     print(f"Weather rows: {len(result)}")
