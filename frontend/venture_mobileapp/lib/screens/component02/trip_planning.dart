@@ -38,6 +38,8 @@ class _Screen1TripPlanningState extends State<Screen1TripPlanning> {
     'Peacock hills',
     'Thotupala kanda',
     'Bathalegala',
+    'Adam\'s peak',
+    'Ella rock',
   ];
 
   DateTime get _today => DateUtils.dateOnly(DateTime.now());

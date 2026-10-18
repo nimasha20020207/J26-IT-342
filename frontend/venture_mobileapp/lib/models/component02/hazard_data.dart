@@ -171,3 +171,44 @@ class ForecastData {
     );
   }
 }
+
+class HeatZoneItem {
+  final String trailName;
+  final double latitude;
+  final double longitude;
+  final String predictedHazard;
+  final double hazardProbability;
+  final double predictedRiskScore;
+  final String riskLevel;
+  final double rainfall24hMm;
+  final double windGustKmh;
+  final double meanSocialReliability;
+
+  const HeatZoneItem({
+    required this.trailName,
+    required this.latitude,
+    required this.longitude,
+    required this.predictedHazard,
+    required this.hazardProbability,
+    required this.predictedRiskScore,
+    required this.riskLevel,
+    required this.rainfall24hMm,
+    required this.windGustKmh,
+    required this.meanSocialReliability,
+  });
+
+  factory HeatZoneItem.fromJson(Map<String, dynamic> json) {
+    return HeatZoneItem(
+      trailName: json['trail_name'] as String,
+      latitude: (json['latitude'] as num).toDouble(),
+      longitude: (json['longitude'] as num).toDouble(),
+      predictedHazard: json['predicted_hazard'] as String,
+      hazardProbability: (json['hazard_probability'] as num).toDouble(),
+      predictedRiskScore: (json['predicted_risk_score'] as num).toDouble(),
+      riskLevel: json['risk_level'] as String,
+      rainfall24hMm: (json['rainfall_24h_mm'] as num).toDouble(),
+      windGustKmh: (json['wind_gust_kmh'] as num).toDouble(),
+      meanSocialReliability: (json['mean_social_reliability'] as num).toDouble(),
+    );
+  }
+}

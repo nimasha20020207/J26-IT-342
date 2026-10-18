@@ -47,6 +47,8 @@ void main() {
         'Peacock hills',
         'Thotupala kanda',
         'Bathalegala',
+        'Adam\'s peak',
+        'Ella rock',
       ],
     );
   });

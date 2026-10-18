@@ -54,6 +54,18 @@ class ApiService {
     return WeatherSummary.fromJson(data);
   }
 
+  Future<List<HeatZoneItem>> getHeatZones() async {
+    final response = await _dio.get<Map<String, dynamic>>('/api/v1/forecasts/heat-zones');
+    final data = response.data;
+    if (data == null) return [];
+
+    final features = data['features'] as List<dynamic>? ?? [];
+    return features.map((f) {
+      final props = (f as Map<String, dynamic>)['properties'] as Map<String, dynamic>;
+      return HeatZoneItem.fromJson(props);
+    }).toList();
+  }
+
   static String _dateOnly(DateTime value) =>
       '${value.year.toString().padLeft(4, '0')}-${value.month.toString().padLeft(2, '0')}-${value.day.toString().padLeft(2, '0')}';
 }
