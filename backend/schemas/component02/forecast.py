@@ -1,5 +1,5 @@
 from datetime import date, datetime
-
+from typing import Any
 from pydantic import BaseModel
 
 
@@ -70,3 +70,46 @@ class ForecastResponse(BaseModel):
     social_reports: list[SocialReport]
     hourly_trends: list[RiskTrend]
     daily_predictions: list[DailyPrediction]
+
+
+# -------------------------------------------------------------
+# Spatial Heat-Zones & Trail Discovery Schemas
+# -------------------------------------------------------------
+class HeatZoneProperties(BaseModel):
+    trail_name: str
+    latitude: float
+    longitude: float
+    predicted_hazard: str
+    hazard_probability: float
+    predicted_risk_score: float
+    risk_level: str
+    rainfall_24h_mm: float
+    wind_gust_kmh: float
+    mean_social_reliability: float
+
+
+class HeatZoneGeometry(BaseModel):
+    type: str = "Point"
+    coordinates: list[float]  # [longitude, latitude]
+
+
+class HeatZoneFeature(BaseModel):
+    type: str = "Feature"
+    geometry: HeatZoneGeometry
+    properties: HeatZoneProperties
+
+
+class HeatZonesResponse(BaseModel):
+    type: str = "FeatureCollection"
+    generated_at: datetime
+    trails_count: int
+    features: list[HeatZoneFeature]
+
+
+class TrailLocationResponse(BaseModel):
+    trail_name: str
+    latitude: float
+    longitude: float
+    elevation_m: int
+    slope_degrees: float
+    terrain: str
