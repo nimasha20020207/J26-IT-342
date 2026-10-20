@@ -2,8 +2,10 @@ import sqlite3
 import os
 import json
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_FILE = os.path.join(BASE_DIR, 'database', 'venture_users.db')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(BASE_DIR))
+
+DB_FILE = os.path.join(PROJECT_ROOT, 'database', 'component01', 'venture_users.db')
 
 def init_db():
     os.makedirs(os.path.dirname(DB_FILE), exist_ok=True)

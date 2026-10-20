@@ -15,9 +15,11 @@ from database import init_db, get_registered_user, DB_FILE
 from nlp_scraper import fetch_live_social_data
 from utils import map_difficulty, extract_scenic_tags, build_route_geometry_from_csv
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_PATH = os.path.join(BASE_DIR, 'models', 'xgboost_trail_model.pkl')
-TRAILS_DATA_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'hiking_trails_sri_lanka.csv')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # මේකෙන් එන්නේ backend\component01
+PROJECT_ROOT = os.path.dirname(os.path.dirname(BASE_DIR))  # මේකෙන් J26-IT-342 ප්‍රධාන ෆෝල්ඩර් එකට යනවා
+
+MODEL_PATH = os.path.join(PROJECT_ROOT, 'ML_models', 'component01', 'models', 'xgboost_trail_model.pkl')
+TRAILS_DATA_PATH = os.path.join(PROJECT_ROOT, 'datasets', 'component01', 'raw', 'hiking_trails_sri_lanka.csv')
 
 app = FastAPI(
     title="Venture - Explainable Trail Recommendation API",
