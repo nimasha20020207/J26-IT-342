@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import '../../models/emergency_models.dart';
 import 'recommended_response_screen.dart';
 
 class ContextAnalysisScreen extends StatelessWidget {
-  const ContextAnalysisScreen({super.key});
+  final FullEmergencyResponseModel response;
+
+  const ContextAnalysisScreen({super.key, required this.response});
 
   @override
   Widget build(BuildContext context) {
+    final ctx = response.contextSummary;
+
     return Scaffold(
       appBar: AppBar(title: const Text('Context Analysis Dashboard')),
       body: SingleChildScrollView(
@@ -13,25 +18,62 @@ class ContextAnalysisScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Environmental & Situational Context', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 12),
+            const Text(
+              'Environmental & Situational Context',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 4),
+            const Text(
+              'Multimodal contextual integration feeding into the Knowledge Graph.',
+              style: TextStyle(color: Colors.grey, fontSize: 13),
+            ),
+            const SizedBox(height: 16),
+
             GridView.count(
               crossAxisCount: 2,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               crossAxisSpacing: 12,
               mainAxisSpacing: 12,
-              childAspectRatio: 1.3,
-              children: const [
-                _ContextCard(icon: Icons.location_on, title: 'Current Location', subtitle: 'Horton Plains, Nuwara Eliya'),
-                _ContextCard(icon: Icons.cloud, title: 'Weather Condition', subtitle: '18°C, 82% Humidity, Wind 12km/h'),
-                _ContextCard(icon: Icons.warning, title: 'Hazard Forecast', subtitle: 'Moderate Landslide & Rain Risk'),
-                _ContextCard(icon: Icons.hiking, title: 'Nearby Trail Info', subtitle: 'World’s End Loop - 9.5 km'),
-                _ContextCard(icon: Icons.terrain, title: 'Terrain Condition', subtitle: 'Slippery rock & steep incline'),
-                _ContextCard(icon: Icons.history, title: 'Historical Incidents', subtitle: '3 recorded falls in past year'),
+              childAspectRatio: 1.25,
+              children: [
+                _ContextCard(
+                  icon: Icons.location_on,
+                  title: 'GPS Coordinates',
+                  subtitle: ctx.coordinates,
+                ),
+                _ContextCard(
+                  icon: Icons.hiking,
+                  title: 'Trail Area',
+                  subtitle: ctx.trailName?.replaceAll('_', ' ') ?? 'Central Highlands Trail',
+                ),
+                _ContextCard(
+                  icon: Icons.cloud,
+                  title: 'Weather Telemetry',
+                  subtitle: ctx.weather,
+                ),
+                _ContextCard(
+                  icon: Icons.terrain,
+                  title: 'Terrain Profile',
+                  subtitle: ctx.terrain,
+                ),
+                _ContextCard(
+                  icon: Icons.battery_alert,
+                  title: 'Hiker Status',
+                  subtitle: ctx.hikerStatus,
+                ),
+                _ContextCard(
+                  icon: Icons.warning_amber_rounded,
+                  title: 'Active Inferred Hazards',
+                  subtitle: response.activeHazards.isNotEmpty
+                      ? response.activeHazards.join(', ').replaceAll('_', ' ')
+                      : 'None Detected',
+                ),
               ],
             ),
             const SizedBox(height: 24),
+
+            // Next button: Recommended Response
             SizedBox(
               width: double.infinity,
               height: 50,
@@ -44,10 +86,12 @@ class ContextAnalysisScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const RecommendedResponseScreen()),
+                    MaterialPageRoute(
+                      builder: (context) => RecommendedResponseScreen(response: response),
+                    ),
                   );
                 },
-                child: const Text('View Recommended Response', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                child: const Text('View Recommended Response Actions', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               ),
             ),
           ],
@@ -80,8 +124,13 @@ class _ContextCard extends StatelessWidget {
           Icon(icon, color: const Color(0xFF10B981), size: 22),
           const SizedBox(height: 6),
           Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-          const SizedBox(height: 2),
-          Text(subtitle, style: const TextStyle(color: Colors.grey, fontSize: 11), maxLines: 2, overflow: TextOverflow.ellipsis),
+          const SizedBox(height: 4),
+          Text(
+            subtitle,
+            style: const TextStyle(color: Colors.grey, fontSize: 11),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
         ],
       ),
     );

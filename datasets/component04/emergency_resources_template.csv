@@ -1,0 +1,9 @@
+resource_id,resource_name,resource_type,trail_area,latitude,longitude,phone,verified,note
+RES001,Knuckles Trail Management Contact,trail_authority,Knuckles,7.45,80.8,VERIFY_LOCALLY_BEFORE_USE,False,Placeholder only; replace with verified official contact details.
+RES002,Horton_Plains Trail Management Contact,trail_authority,Horton_Plains,6.8,80.8,VERIFY_LOCALLY_BEFORE_USE,False,Placeholder only; replace with verified official contact details.
+RES003,Ella_Rock Trail Management Contact,trail_authority,Ella_Rock,6.87,81.05,VERIFY_LOCALLY_BEFORE_USE,False,Placeholder only; replace with verified official contact details.
+RES004,Adam_Peak Trail Management Contact,trail_authority,Adam_Peak,6.81,80.5,VERIFY_LOCALLY_BEFORE_USE,False,Placeholder only; replace with verified official contact details.
+RES005,Sinharaja Trail Management Contact,trail_authority,Sinharaja,6.42,80.5,VERIFY_LOCALLY_BEFORE_USE,False,Placeholder only; replace with verified official contact details.
+RES006,Pidurangala Trail Management Contact,trail_authority,Pidurangala,7.95,80.75,VERIFY_LOCALLY_BEFORE_USE,False,Placeholder only; replace with verified official contact details.
+RES007,Riverston Trail Management Contact,trail_authority,Riverston,7.52,80.73,VERIFY_LOCALLY_BEFORE_USE,False,Placeholder only; replace with verified official contact details.
+RES008,Meemure Trail Management Contact,trail_authority,Meemure,7.43,80.85,VERIFY_LOCALLY_BEFORE_USE,False,Placeholder only; replace with verified official contact details.

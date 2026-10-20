@@ -1,0 +1,1201 @@
+incident_id,incident_text,emergency_type,severity_level,recommended_action
+SYN00001,We have lost the marked path and cannot identify our current location. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00002,Strong winds and heavy rain have reduced visibility on the ridge. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00003,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00004,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00005,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00006,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,3,share_gps_location
+SYN00007,The hiking path is blocked and the group needs route advice. Heavy rainfall is present. The location is remote.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00008,A hiker reports cramps and fatigue after a long ascent.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00009,A hiker reports cramps and fatigue after a long ascent. Heavy rainfall is present. The location is remote.,dehydration_fatigue,3,share_gps_location
+SYN00010,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00011,Flood water blocks the trail and visibility is getting worse. Heavy rainfall is present. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00012,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00013,Extreme weather makes continuing along the ridge unsafe.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN00014,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,provide_first_aid_if_trained
+SYN00015,Hiker twisted an ankle on a rocky trail and cannot walk without help. Heavy rainfall is present. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00016,One member slipped on wet ground and has a bleeding cut. The location is remote.,injury,3,provide_first_aid_if_trained
+SYN00017,We are unsure which trail junction to take and daylight is fading.,lost_hiker,3,contact_rescue_authority
+SYN00018,One member slipped on wet ground and has a bleeding cut. The location is remote.,injury,3,request_rescue_assistance
+SYN00019,A fallen tree blocks the marked trail and no safe bypass is obvious. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00020,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00021,Thunderstorms are approaching and the trail is exposed. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00022,One member slipped on wet ground and has a bleeding cut. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00023,"A hiker is dizzy, exhausted and has very little water remaining. Visibility is poor. The location is remote.",dehydration_fatigue,2,share_gps_location
+SYN00024,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00025,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00026,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00027,A wildlife encounter has made the trail unsafe to continue. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00028,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00029,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00030,The group has stopped because a member feels faint and overheated. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00031,Hiker injured after a fall; group requests rescue assistance. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00032,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00033,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00034,A hiker fell near a steep section and reports severe pain.,injury,3,provide_first_aid_if_trained
+SYN00035,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00036,We are unsure which trail junction to take and daylight is fading. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00037,Hiker injured after a fall; group requests rescue assistance. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00038,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00039,The route is blocked by debris after overnight rain. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00040,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00041,One member is weak and struggling to continue in the heat. The location is remote.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00042,Hiker injured after a fall; group requests rescue assistance. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00043,Hiker twisted an ankle on a rocky trail and cannot walk without help. Heavy rainfall is present.,injury,3,share_gps_location
+SYN00044,Heavy rain has flooded the path near the river.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00045,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00046,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00047,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00048,A hiker reports cramps and fatigue after a long ascent.,dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00049,The group is cold and visibility has dropped suddenly.,severe_weather,3,contact_rescue_authority
+SYN00050,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00051,A hiker is separated from the group and phone battery is low. Heavy rainfall is present.,lost_hiker,3,contact_rescue_authority
+SYN00052,The group is lost in mist and needs location assistance. The location is remote.,lost_hiker,2,contact_rescue_authority
+SYN00053,Thunderstorms are approaching and the trail is exposed. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00054,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00055,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00056,A hiker fell near a steep section and reports severe pain.,injury,3,request_rescue_assistance
+SYN00057,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00058,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,2,contact_medical_help_if_severe
+SYN00059,Hiker injured after a fall; group requests rescue assistance. Heavy rainfall is present. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00060,Debris has fallen across the trail; hikers are close to the slope. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00061,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,2,share_gps_location
+SYN00062,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,2,share_gps_location
+SYN00063,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00064,The group has stopped because a member feels faint and overheated. Heavy rainfall is present. The location is remote.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00065,The route is blocked by debris after overnight rain.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00066,One member slipped on wet ground and has a bleeding cut. The location is remote.,injury,3,request_rescue_assistance
+SYN00067,Extreme weather makes continuing along the ridge unsafe.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00068,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,3,contact_trail_authority
+SYN00069,The group is lost in mist and needs location assistance. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00070,We are unsure which trail junction to take and daylight is fading.,lost_hiker,3,contact_rescue_authority
+SYN00071,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,3,share_gps_location
+SYN00072,A hiker fell near a steep section and reports severe pain. Heavy rainfall is present. The location is remote.,injury,2,share_gps_location
+SYN00073,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00074,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00075,The group cannot safely cross a fast-flowing stream. Heavy rainfall is present. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00076,One member slipped on wet ground and has a bleeding cut. The location is remote.,injury,2,request_rescue_assistance
+SYN00077,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00078,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00079,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00080,A hiker is separated from the group and phone battery is low. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00081,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00082,Extreme weather makes continuing along the ridge unsafe. Visibility is poor. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00083,We are unsure which trail junction to take and daylight is fading. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00084,The group cannot safely cross a fast-flowing stream. Heavy rainfall is present. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00085,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00086,The route is blocked by debris after overnight rain.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00087,The hikers feel threatened by wildlife near dense vegetation. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00088,The group is cold and visibility has dropped suddenly.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00089,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,3,do_not_cross_unsafe_obstacle
+SYN00090,The route is blocked by debris after overnight rain.,trail_blockage,3,contact_trail_authority
+SYN00091,We have lost the marked path and cannot identify our current location. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00092,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00093,We are unsure which trail junction to take and daylight is fading.,lost_hiker,3,share_gps_location
+SYN00094,We are unsure which trail junction to take and daylight is fading. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00095,The group is lost in mist and needs location assistance. The location is remote.,lost_hiker,3,share_gps_location
+SYN00096,Strong winds and heavy rain have reduced visibility on the ridge. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00097,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00098,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote.,landslide,3,move_away_from_slope_if_safe
+SYN00099,The route is blocked by debris after overnight rain.,trail_blockage,3,do_not_cross_unsafe_obstacle
+SYN00100,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00101,We have lost the marked path and cannot identify our current location. Heavy rainfall is present.,lost_hiker,3,share_gps_location
+SYN00102,Debris has fallen across the trail; hikers are close to the slope. The location is remote.,landslide,3,contact_rescue_authority
+SYN00103,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00104,A hiker fell near a steep section and reports severe pain. Heavy rainfall is present.,injury,2,provide_first_aid_if_trained
+SYN00105,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00106,The group has stopped because a member feels faint and overheated. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00107,Hiker injured after a fall; group requests rescue assistance. Heavy rainfall is present.,injury,2,request_rescue_assistance
+SYN00108,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00109,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00110,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00111,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,request_rescue_assistance
+SYN00112,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00113,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,2,contact_trail_authority
+SYN00114,A hiker reports cramps and fatigue after a long ascent. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00115,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote.",dehydration_fatigue,2,share_gps_location
+SYN00116,Hiker injured after a fall; group requests rescue assistance. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00117,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,2,contact_medical_help_if_severe
+SYN00118,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00119,A landslide has blocked the route and the group needs safe guidance. The location is remote.,landslide,3,contact_rescue_authority
+SYN00120,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,3,contact_trail_authority
+SYN00121,The hiking path is blocked and the group needs route advice.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00122,The hikers feel threatened by wildlife near dense vegetation. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00123,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00124,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00125,We have lost the marked path and cannot identify our current location. Heavy rainfall is present. The location is remote.,lost_hiker,3,contact_rescue_authority
+SYN00126,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00127,Water is rising across the trail and the stream crossing looks dangerous.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00128,One member slipped on wet ground and has a bleeding cut. The location is remote.,injury,3,share_gps_location
+SYN00129,The group encountered a wild animal close to the trail. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00130,Strong winds and heavy rain have reduced visibility on the ridge. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00131,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,contact_rescue_authority
+SYN00132,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00133,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,2,contact_medical_help_if_severe
+SYN00134,The group cannot safely cross a fast-flowing stream. Heavy rainfall is present. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00135,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00136,The group is lost in mist and needs location assistance.,lost_hiker,2,share_gps_location
+SYN00137,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00138,The hiking path is blocked and the group needs route advice. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00139,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00140,One member is weak and struggling to continue in the heat. The location is remote.,dehydration_fatigue,2,share_gps_location
+SYN00141,The hikers feel threatened by wildlife near dense vegetation. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00142,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00143,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote.,landslide,3,move_away_from_slope_if_safe
+SYN00144,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00145,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,share_gps_location
+SYN00146,The group is cold and visibility has dropped suddenly. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00147,The group encountered a wild animal close to the trail.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00148,The hiking path is blocked and the group needs route advice. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00149,The route is blocked by debris after overnight rain.,trail_blockage,1,contact_trail_authority
+SYN00150,One member slipped on wet ground and has a bleeding cut. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00151,A landslide has blocked the route and the group needs safe guidance. Heavy rainfall is present. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00152,The route is blocked by debris after overnight rain.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00153,The group cannot safely cross a fast-flowing stream.,flooding,3,contact_rescue_authority
+SYN00154,We have lost the marked path and cannot identify our current location. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00155,A landslide has blocked the route and the group needs safe guidance. Heavy rainfall is present. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00156,A landslide has blocked the route and the group needs safe guidance. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00157,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00158,The hikers feel threatened by wildlife near dense vegetation. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00159,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,2,contact_trail_authority
+SYN00160,Debris has fallen across the trail; hikers are close to the slope. The location is remote.,landslide,3,contact_rescue_authority
+SYN00161,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00162,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00163,The group has stopped because a member feels faint and overheated. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00164,Flood water blocks the trail and visibility is getting worse.,flooding,3,contact_rescue_authority
+SYN00165,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00166,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00167,Debris has fallen across the trail; hikers are close to the slope.,landslide,3,contact_rescue_authority
+SYN00168,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00169,We have lost the marked path and cannot identify our current location. Heavy rainfall is present.,lost_hiker,2,share_gps_location
+SYN00170,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00171,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00172,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,3,stop_in_safe_shade
+SYN00173,A hiker is separated from the group and phone battery is low.,lost_hiker,3,stay_in_safe_location
+SYN00174,The group is lost in mist and needs location assistance. Heavy rainfall is present.,lost_hiker,2,share_gps_location
+SYN00175,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,3,retreat_slowly_if_safe
+SYN00176,The group encountered a wild animal close to the trail.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00177,Hiker twisted an ankle on a rocky trail and cannot walk without help. Heavy rainfall is present. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00178,Thunderstorms are approaching and the trail is exposed. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00179,A wildlife encounter has made the trail unsafe to continue. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00180,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00181,Hiker twisted an ankle on a rocky trail and cannot walk without help.,injury,2,request_rescue_assistance
+SYN00182,A landslide has blocked the route and the group needs safe guidance.,landslide,3,move_away_from_slope_if_safe
+SYN00183,The hikers feel threatened by wildlife near dense vegetation. Heavy rainfall is present. Visibility is poor.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00184,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00185,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00186,Heavy rain has flooded the path near the river. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00187,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00188,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present. Visibility is poor.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN00189,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN00190,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00191,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,2,contact_trail_authority
+SYN00192,A hiker is separated from the group and phone battery is low. Heavy rainfall is present.,lost_hiker,3,share_gps_location
+SYN00193,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,2,share_gps_location
+SYN00194,A slope is moving beside the hiking path and the route looks unsafe. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00195,A fallen tree blocks the marked trail and no safe bypass is obvious. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00196,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,3,return_to_known_safe_route_if_safe
+SYN00197,A hiker is separated from the group and phone battery is low. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00198,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00199,The group has stopped because a member feels faint and overheated. Heavy rainfall is present. The location is remote.,dehydration_fatigue,1,stop_in_safe_shade
+SYN00200,The group is lost in mist and needs location assistance. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00201,Debris has fallen across the trail; hikers are close to the slope. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00202,A hiker is separated from the group and phone battery is low. Heavy rainfall is present.,lost_hiker,3,stay_in_safe_location
+SYN00203,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00204,Flood water blocks the trail and visibility is getting worse. The location is remote.,flooding,3,contact_rescue_authority
+SYN00205,"A hiker is dizzy, exhausted and has very little water remaining. Visibility is poor. The location is remote.",dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00206,A hiker fell near a steep section and reports severe pain. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00207,The group is cold and visibility has dropped suddenly. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00208,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00209,The group is cold and visibility has dropped suddenly.,severe_weather,3,leave_exposed_area_if_safe
+SYN00210,Fresh earth and rocks have blocked the trail after heavy rain. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00211,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,2,contact_rescue_authority
+SYN00212,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00213,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00214,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00215,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,2,contact_rescue_authority
+SYN00216,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00217,The group is lost in mist and needs location assistance. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00218,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,1,contact_trail_authority
+SYN00219,One member is weak and struggling to continue in the heat.,dehydration_fatigue,2,share_gps_location
+SYN00220,The route is blocked by debris after overnight rain. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00221,Hiker injured after a fall; group requests rescue assistance. Heavy rainfall is present. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00222,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,2,share_gps_location
+SYN00223,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00224,Water is rising across the trail and the stream crossing looks dangerous. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00225,One member slipped on wet ground and has a bleeding cut. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00226,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN00227,Extreme weather makes continuing along the ridge unsafe.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00228,A slope is moving beside the hiking path and the route looks unsafe. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00229,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00230,The hikers feel threatened by wildlife near dense vegetation. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00231,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote.,injury,3,provide_first_aid_if_trained
+SYN00232,Water is rising across the trail and the stream crossing looks dangerous. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00233,The route is blocked by debris after overnight rain. Heavy rainfall is present.,trail_blockage,2,contact_trail_authority
+SYN00234,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00235,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN00236,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00237,"A hiker is dizzy, exhausted and has very little water remaining. Heavy rainfall is present.",dehydration_fatigue,2,share_gps_location
+SYN00238,Flood water blocks the trail and visibility is getting worse.,flooding,3,contact_rescue_authority
+SYN00239,Hiker twisted an ankle on a rocky trail and cannot walk without help.,injury,2,share_gps_location
+SYN00240,A hiker is separated from the group and phone battery is low.,lost_hiker,3,contact_rescue_authority
+SYN00241,"A hiker is dizzy, exhausted and has very little water remaining. Immediate assistance may be needed.",dehydration_fatigue,5,stop_in_safe_shade
+SYN00242,The group encountered a wild animal close to the trail. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00243,We are unsure which trail junction to take and daylight is fading. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00244,The hikers feel threatened by wildlife near dense vegetation. Heavy rainfall is present. The location is remote.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00245,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,1,share_gps_location
+SYN00246,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00247,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote.,landslide,3,avoid_crossing_debris
+SYN00248,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00249,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00250,The group has stopped because a member feels faint and overheated. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00251,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00252,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00253,Strong winds and heavy rain have reduced visibility on the ridge.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00254,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00255,We are unsure which trail junction to take and daylight is fading. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00256,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,3,contact_rescue_authority
+SYN00257,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote.",dehydration_fatigue,3,stop_in_safe_shade
+SYN00258,We are unsure which trail junction to take and daylight is fading. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00259,A slope is moving beside the hiking path and the route looks unsafe. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00260,We are unsure which trail junction to take and daylight is fading. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00261,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00262,The route is blocked by debris after overnight rain. Heavy rainfall is present. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00263,The hikers feel threatened by wildlife near dense vegetation. Heavy rainfall is present. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00264,One member is weak and struggling to continue in the heat.,dehydration_fatigue,3,stop_in_safe_shade
+SYN00265,We are unsure which trail junction to take and daylight is fading. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00266,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,2,stop_in_safe_shade
+SYN00267,A hiker fell near a steep section and reports severe pain. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00268,A wildlife encounter has made the trail unsafe to continue. Heavy rainfall is present. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00269,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00270,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,2,share_gps_location
+SYN00271,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00272,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00273,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00274,The group is lost in mist and needs location assistance. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN00275,The group has stopped because a member feels faint and overheated. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00276,The hiking path is blocked and the group needs route advice. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00277,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00278,A hiker reports cramps and fatigue after a long ascent. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00279,A wild animal is blocking the path and the hikers are keeping distance. Heavy rainfall is present. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00280,The route is blocked by debris after overnight rain. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00281,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00282,The group encountered a wild animal close to the trail.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN00283,A landslide has blocked the route and the group needs safe guidance.,landslide,3,move_away_from_slope_if_safe
+SYN00284,A hiker fell near a steep section and reports severe pain. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00285,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00286,"A hiker is dizzy, exhausted and has very little water remaining. Heavy rainfall is present. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00287,Strong winds and heavy rain have reduced visibility on the ridge.,severe_weather,3,leave_exposed_area_if_safe
+SYN00288,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00289,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00290,Heavy rain has flooded the path near the river. The location is remote.,flooding,3,do_not_cross_fast_water
+SYN00291,Debris has fallen across the trail; hikers are close to the slope. Heavy rainfall is present. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00292,The group is cold and visibility has dropped suddenly.,severe_weather,3,leave_exposed_area_if_safe
+SYN00293,A hiker reports cramps and fatigue after a long ascent.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00294,We have lost the marked path and cannot identify our current location. Heavy rainfall is present. Visibility is poor. The location is remote.,lost_hiker,3,share_gps_location
+SYN00295,Hiker injured after a fall; group requests rescue assistance. Heavy rainfall is present.,injury,3,provide_first_aid_if_trained
+SYN00296,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00297,Heavy rain has flooded the path near the river. Heavy rainfall is present. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00298,The route is blocked by debris after overnight rain.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00299,We have lost the marked path and cannot identify our current location. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00300,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00301,Thunderstorms are approaching and the trail is exposed. Heavy rainfall is present.,severe_weather,2,contact_rescue_authority
+SYN00302,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00303,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00304,A slope is moving beside the hiking path and the route looks unsafe. The location is remote.,landslide,3,avoid_crossing_debris
+SYN00305,A hiker is separated from the group and phone battery is low.,lost_hiker,2,share_gps_location
+SYN00306,One member is weak and struggling to continue in the heat. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00307,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00308,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00309,Hiker injured after a fall; group requests rescue assistance. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00310,Hiker injured after a fall; group requests rescue assistance. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00311,Flood water blocks the trail and visibility is getting worse. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00312,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00313,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,2,contact_trail_authority
+SYN00314,A fallen tree blocks the marked trail and no safe bypass is obvious. Heavy rainfall is present.,trail_blockage,3,do_not_cross_unsafe_obstacle
+SYN00315,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00316,The group has stopped because a member feels faint and overheated. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00317,One member slipped on wet ground and has a bleeding cut. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00318,The hiking path is blocked and the group needs route advice.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00319,Heavy rain has flooded the path near the river.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00320,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,1,contact_trail_authority
+SYN00321,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00322,A hiker reports cramps and fatigue after a long ascent.,dehydration_fatigue,1,stop_in_safe_shade
+SYN00323,The route is blocked by debris after overnight rain.,trail_blockage,2,contact_trail_authority
+SYN00324,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,2,contact_rescue_authority
+SYN00325,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00326,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,1,stop_in_safe_shade
+SYN00327,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00328,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,3,return_to_known_safe_route_if_safe
+SYN00329,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,3,retreat_slowly_if_safe
+SYN00330,Water is rising across the trail and the stream crossing looks dangerous.,flooding,3,contact_rescue_authority
+SYN00331,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,3,contact_trail_authority
+SYN00332,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00333,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00334,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00335,A slope is moving beside the hiking path and the route looks unsafe. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00336,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,1,contact_trail_authority
+SYN00337,A fallen tree blocks the marked trail and no safe bypass is obvious. Heavy rainfall is present.,trail_blockage,3,return_to_known_safe_route_if_safe
+SYN00338,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,3,contact_trail_authority
+SYN00339,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote.,injury,2,share_gps_location
+SYN00340,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,avoid_crossing_debris
+SYN00341,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00342,Water is rising across the trail and the stream crossing looks dangerous. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00343,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,3,retreat_slowly_if_safe
+SYN00344,A hiker is separated from the group and phone battery is low. Heavy rainfall is present.,lost_hiker,2,contact_rescue_authority
+SYN00345,We have lost the marked path and cannot identify our current location. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00346,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00347,The group cannot safely cross a fast-flowing stream.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00348,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,2,request_rescue_assistance
+SYN00349,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00350,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,request_rescue_assistance
+SYN00351,Water is rising across the trail and the stream crossing looks dangerous. Visibility is poor. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00352,The route is blocked by debris after overnight rain.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00353,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00354,Debris has fallen across the trail; hikers are close to the slope. The location is remote.,landslide,3,contact_rescue_authority
+SYN00355,Hiker injured after a fall; group requests rescue assistance. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00356,The group has stopped because a member feels faint and overheated. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00357,The group is lost in mist and needs location assistance. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00358,A hiker fell near a steep section and reports severe pain.,injury,3,request_rescue_assistance
+SYN00359,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00360,One member slipped on wet ground and has a bleeding cut. The location is remote.,injury,3,request_rescue_assistance
+SYN00361,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,2,share_gps_location
+SYN00362,The hiking path is blocked and the group needs route advice.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN00363,One member slipped on wet ground and has a bleeding cut. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00364,One member slipped on wet ground and has a bleeding cut. The location is remote.,injury,3,share_gps_location
+SYN00365,We have lost the marked path and cannot identify our current location. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00366,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN00367,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00368,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00369,Hiker injured after a fall; group requests rescue assistance. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00370,A wildlife encounter has made the trail unsafe to continue. Visibility is poor. The location is remote.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00371,One member slipped on wet ground and has a bleeding cut.,injury,2,share_gps_location
+SYN00372,A landslide has blocked the route and the group needs safe guidance.,landslide,3,avoid_crossing_debris
+SYN00373,The group encountered a wild animal close to the trail. Heavy rainfall is present. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00374,A hiker is separated from the group and phone battery is low. Heavy rainfall is present.,lost_hiker,3,share_gps_location
+SYN00375,We are unsure which trail junction to take and daylight is fading.,lost_hiker,3,stay_in_safe_location
+SYN00376,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,2,share_gps_location
+SYN00377,A wild animal is blocking the path and the hikers are keeping distance. Heavy rainfall is present.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00378,One member is weak and struggling to continue in the heat. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00379,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00380,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,2,share_gps_location
+SYN00381,Debris has fallen across the trail; hikers are close to the slope. Heavy rainfall is present.,landslide,3,avoid_crossing_debris
+SYN00382,A landslide has blocked the route and the group needs safe guidance. Heavy rainfall is present. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00383,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00384,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00385,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00386,One member is weak and struggling to continue in the heat.,dehydration_fatigue,2,contact_medical_help_if_severe
+SYN00387,A hiker fell near a steep section and reports severe pain. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00388,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00389,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00390,A hiker is separated from the group and phone battery is low. Visibility is poor. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00391,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,3,share_gps_location
+SYN00392,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00393,The group is lost in mist and needs location assistance.,lost_hiker,2,share_gps_location
+SYN00394,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00395,The route is blocked by debris after overnight rain.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00396,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote.,injury,2,provide_first_aid_if_trained
+SYN00397,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00398,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,1,contact_trail_authority
+SYN00399,We are unsure which trail junction to take and daylight is fading. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00400,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00401,One member is weak and struggling to continue in the heat. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00402,Heavy rain has flooded the path near the river. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00403,A fallen tree blocks the marked trail and no safe bypass is obvious. Heavy rainfall is present.,trail_blockage,2,contact_trail_authority
+SYN00404,One member is weak and struggling to continue in the heat. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00405,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,3,share_gps_location
+SYN00406,Hiker injured after a fall; group requests rescue assistance.,injury,3,provide_first_aid_if_trained
+SYN00407,The group has stopped because a member feels faint and overheated. Heavy rainfall is present. The location is remote.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00408,The group encountered a wild animal close to the trail. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00409,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00410,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,1,share_gps_location
+SYN00411,The group is lost in mist and needs location assistance.,lost_hiker,2,stay_in_safe_location
+SYN00412,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00413,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00414,The group is cold and visibility has dropped suddenly.,severe_weather,2,contact_rescue_authority
+SYN00415,The group is cold and visibility has dropped suddenly. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00416,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00417,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00418,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00419,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00420,The group is lost in mist and needs location assistance. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN00421,Fresh earth and rocks have blocked the trail after heavy rain. Heavy rainfall is present. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00422,Strong winds and heavy rain have reduced visibility on the ridge. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00423,The route is blocked by debris after overnight rain. Visibility is poor. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00424,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,3,contact_trail_authority
+SYN00425,A hiker is separated from the group and phone battery is low. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN00426,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,1,share_gps_location
+SYN00427,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00428,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,stay_in_safe_location
+SYN00429,We are unsure which trail junction to take and daylight is fading. Heavy rainfall is present. The location is remote.,lost_hiker,2,share_gps_location
+SYN00430,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,3,contact_rescue_authority
+SYN00431,We are unsure which trail junction to take and daylight is fading. Visibility is poor. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00432,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00433,A slope is moving beside the hiking path and the route looks unsafe. Visibility is poor. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00434,Hiker twisted an ankle on a rocky trail and cannot walk without help. Heavy rainfall is present. The location is remote.,injury,3,share_gps_location
+SYN00435,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present. The location is remote.,trail_blockage,2,contact_trail_authority
+SYN00436,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,3,contact_rescue_authority
+SYN00437,Extreme weather makes continuing along the ridge unsafe. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00438,We are unsure which trail junction to take and daylight is fading. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00439,The group has stopped because a member feels faint and overheated. Visibility is poor. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00440,We are unsure which trail junction to take and daylight is fading. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00441,Hiker injured after a fall; group requests rescue assistance.,injury,2,provide_first_aid_if_trained
+SYN00442,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00443,A hiker is separated from the group and phone battery is low.,lost_hiker,3,stay_in_safe_location
+SYN00444,Extreme weather makes continuing along the ridge unsafe.,severe_weather,3,contact_rescue_authority
+SYN00445,A hiker is separated from the group and phone battery is low. Visibility is poor. The location is remote.,lost_hiker,2,share_gps_location
+SYN00446,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote.",dehydration_fatigue,1,share_gps_location
+SYN00447,Extreme weather makes continuing along the ridge unsafe. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00448,We have lost the marked path and cannot identify our current location. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00449,One member is weak and struggling to continue in the heat.,dehydration_fatigue,2,stop_in_safe_shade
+SYN00450,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00451,The group is lost in mist and needs location assistance.,lost_hiker,3,share_gps_location
+SYN00452,The hikers feel threatened by wildlife near dense vegetation. Heavy rainfall is present. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00453,The group is lost in mist and needs location assistance. Heavy rainfall is present.,lost_hiker,3,stay_in_safe_location
+SYN00454,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00455,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00456,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00457,Water is rising across the trail and the stream crossing looks dangerous. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00458,We have lost the marked path and cannot identify our current location. Heavy rainfall is present. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00459,Flood water blocks the trail and visibility is getting worse. Heavy rainfall is present. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00460,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,2,contact_trail_authority
+SYN00461,The group has stopped because a member feels faint and overheated. Heavy rainfall is present. The location is remote.,dehydration_fatigue,1,share_gps_location
+SYN00462,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00463,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00464,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00465,One member slipped on wet ground and has a bleeding cut.,injury,2,provide_first_aid_if_trained
+SYN00466,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00467,A hiker is separated from the group and phone battery is low. Heavy rainfall is present. The location is remote.,lost_hiker,2,share_gps_location
+SYN00468,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,3,stop_in_safe_shade
+SYN00469,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00470,A wild animal is blocking the path and the hikers are keeping distance. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00471,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00472,"A hiker is dizzy, exhausted and has very little water remaining. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00473,The route is blocked by debris after overnight rain.,trail_blockage,2,contact_trail_authority
+SYN00474,Extreme weather makes continuing along the ridge unsafe. The location is remote.,severe_weather,3,leave_exposed_area_if_safe
+SYN00475,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,3,contact_rescue_authority
+SYN00476,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00477,The hiking path is blocked and the group needs route advice.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00478,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00479,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00480,Thunderstorms are approaching and the trail is exposed. Heavy rainfall is present. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00481,A fallen tree blocks the marked trail and no safe bypass is obvious. Visibility is poor.,trail_blockage,3,return_to_known_safe_route_if_safe
+SYN00482,A wild animal is blocking the path and the hikers are keeping distance. Heavy rainfall is present.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00483,Extreme weather makes continuing along the ridge unsafe.,severe_weather,2,leave_exposed_area_if_safe
+SYN00484,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00485,Extreme weather makes continuing along the ridge unsafe. The location is remote.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN00486,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present.,trail_blockage,1,contact_trail_authority
+SYN00487,"A hiker is dizzy, exhausted and has very little water remaining. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00488,"A hiker is dizzy, exhausted and has very little water remaining. Heavy rainfall is present. The location is remote.",dehydration_fatigue,2,share_gps_location
+SYN00489,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00490,The group encountered a wild animal close to the trail.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00491,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present.,severe_weather,3,contact_rescue_authority
+SYN00492,A hiker fell near a steep section and reports severe pain. Visibility is poor. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00493,A hiker is separated from the group and phone battery is low.,lost_hiker,2,share_gps_location
+SYN00494,The group is cold and visibility has dropped suddenly. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00495,The group is lost in mist and needs location assistance. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00496,The route is blocked by debris after overnight rain.,trail_blockage,3,contact_trail_authority
+SYN00497,We have lost the marked path and cannot identify our current location. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00498,A hiker reports cramps and fatigue after a long ascent. Heavy rainfall is present. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00499,The group is lost in mist and needs location assistance. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00500,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00501,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00502,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00503,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00504,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00505,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00506,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00507,A slope is moving beside the hiking path and the route looks unsafe. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00508,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00509,A hiker is separated from the group and phone battery is low.,lost_hiker,2,contact_rescue_authority
+SYN00510,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00511,The group is lost in mist and needs location assistance. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00512,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,3,retreat_slowly_if_safe
+SYN00513,The group is lost in mist and needs location assistance. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00514,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,stay_in_safe_location
+SYN00515,The group has stopped because a member feels faint and overheated. Heavy rainfall is present.,dehydration_fatigue,3,share_gps_location
+SYN00516,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00517,Hiker injured after a fall; group requests rescue assistance. Heavy rainfall is present. The location is remote.,injury,2,provide_first_aid_if_trained
+SYN00518,Water is rising across the trail and the stream crossing looks dangerous. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00519,The hiking path is blocked and the group needs route advice.,trail_blockage,2,contact_trail_authority
+SYN00520,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00521,A hiker is separated from the group and phone battery is low. The location is remote.,lost_hiker,3,share_gps_location
+SYN00522,Hiker injured after a fall; group requests rescue assistance. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00523,A wildlife encounter has made the trail unsafe to continue. Heavy rainfall is present. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00524,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00525,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00526,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote.,landslide,3,move_away_from_slope_if_safe
+SYN00527,Debris has fallen across the trail; hikers are close to the slope. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00528,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00529,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,3,share_gps_location
+SYN00530,A landslide has blocked the route and the group needs safe guidance. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00531,The group encountered a wild animal close to the trail. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00532,One member is weak and struggling to continue in the heat. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00533,A landslide has blocked the route and the group needs safe guidance. The location is remote.,landslide,3,avoid_crossing_debris
+SYN00534,"A hiker is dizzy, exhausted and has very little water remaining. Visibility is poor. The location is remote.",dehydration_fatigue,1,stop_in_safe_shade
+SYN00535,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00536,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,request_rescue_assistance
+SYN00537,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00538,Strong winds and heavy rain have reduced visibility on the ridge. Heavy rainfall is present. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00539,A wild animal is blocking the path and the hikers are keeping distance. Heavy rainfall is present. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00540,The group encountered a wild animal close to the trail. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00541,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00542,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00543,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00544,The group is lost in mist and needs location assistance.,lost_hiker,2,share_gps_location
+SYN00545,One member slipped on wet ground and has a bleeding cut. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00546,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00547,The hikers feel threatened by wildlife near dense vegetation. Heavy rainfall is present. The location is remote.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN00548,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,stay_in_safe_location
+SYN00549,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00550,Hiker twisted an ankle on a rocky trail and cannot walk without help. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00551,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00552,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00553,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,3,contact_rescue_authority
+SYN00554,The group cannot safely cross a fast-flowing stream. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00555,Flood water blocks the trail and visibility is getting worse. The location is remote.,flooding,3,do_not_cross_fast_water
+SYN00556,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,move_away_from_slope_if_safe
+SYN00557,Thunderstorms are approaching and the trail is exposed. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00558,One member slipped on wet ground and has a bleeding cut. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00559,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,2,share_gps_location
+SYN00560,Strong winds and heavy rain have reduced visibility on the ridge. Heavy rainfall is present. The location is remote.,severe_weather,2,contact_rescue_authority
+SYN00561,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00562,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present. The location is remote.,trail_blockage,3,return_to_known_safe_route_if_safe
+SYN00563,Strong winds and heavy rain have reduced visibility on the ridge. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00564,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,request_rescue_assistance
+SYN00565,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote.,landslide,3,move_away_from_slope_if_safe
+SYN00566,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00567,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00568,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00569,Strong winds and heavy rain have reduced visibility on the ridge.,severe_weather,2,leave_exposed_area_if_safe
+SYN00570,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote.",dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00571,The group encountered a wild animal close to the trail. Heavy rainfall is present.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00572,One member slipped on wet ground and has a bleeding cut.,injury,3,provide_first_aid_if_trained
+SYN00573,The hikers feel threatened by wildlife near dense vegetation. Heavy rainfall is present.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00574,The group is lost in mist and needs location assistance. Heavy rainfall is present. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00575,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote.",dehydration_fatigue,3,share_gps_location
+SYN00576,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,2,provide_first_aid_if_trained
+SYN00577,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00578,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00579,The group cannot safely cross a fast-flowing stream. Heavy rainfall is present. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00580,Extreme weather makes continuing along the ridge unsafe. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00581,Flood water blocks the trail and visibility is getting worse. The location is remote.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00582,Extreme weather makes continuing along the ridge unsafe.,severe_weather,3,contact_rescue_authority
+SYN00583,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00584,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00585,We are unsure which trail junction to take and daylight is fading. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00586,A bridge on the trail appears damaged and cannot be crossed safely. Visibility is poor. The location is remote.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN00587,One member is weak and struggling to continue in the heat. The location is remote.,dehydration_fatigue,3,share_gps_location
+SYN00588,The group is cold and visibility has dropped suddenly. Heavy rainfall is present. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00589,We have lost the marked path and cannot identify our current location.,lost_hiker,3,contact_rescue_authority
+SYN00590,A hiker is separated from the group and phone battery is low. Visibility is poor. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00591,The group is cold and visibility has dropped suddenly. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00592,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00593,Debris has fallen across the trail; hikers are close to the slope.,landslide,3,move_away_from_slope_if_safe
+SYN00594,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote.,injury,3,provide_first_aid_if_trained
+SYN00595,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,2,contact_trail_authority
+SYN00596,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00597,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00598,The hiking path is blocked and the group needs route advice. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00599,Water is rising across the trail and the stream crossing looks dangerous. The location is remote.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00600,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00601,The group encountered a wild animal close to the trail.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00602,Strong winds and heavy rain have reduced visibility on the ridge.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00603,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00604,A fallen tree blocks the marked trail and no safe bypass is obvious. Visibility is poor. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00605,The route is blocked by debris after overnight rain.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00606,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00607,A landslide has blocked the route and the group needs safe guidance. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00608,Strong winds and heavy rain have reduced visibility on the ridge. Heavy rainfall is present. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00609,One member slipped on wet ground and has a bleeding cut.,injury,3,share_gps_location
+SYN00610,A hiker fell near a steep section and reports severe pain.,injury,3,provide_first_aid_if_trained
+SYN00611,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,3,request_rescue_assistance
+SYN00612,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00613,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN00614,The route is blocked by debris after overnight rain. Visibility is poor. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00615,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00616,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present.,trail_blockage,2,contact_trail_authority
+SYN00617,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00618,We are unsure which trail junction to take and daylight is fading. Heavy rainfall is present.,lost_hiker,3,contact_rescue_authority
+SYN00619,The group encountered a wild animal close to the trail. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00620,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00621,The group encountered a wild animal close to the trail.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00622,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00623,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00624,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,2,request_rescue_assistance
+SYN00625,Flood water blocks the trail and visibility is getting worse. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00626,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,3,share_gps_location
+SYN00627,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00628,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,3,share_gps_location
+SYN00629,Thunderstorms are approaching and the trail is exposed. Heavy rainfall is present.,severe_weather,3,contact_rescue_authority
+SYN00630,The group is cold and visibility has dropped suddenly.,severe_weather,3,leave_exposed_area_if_safe
+SYN00631,Water is rising across the trail and the stream crossing looks dangerous.,flooding,3,do_not_cross_fast_water
+SYN00632,The group is cold and visibility has dropped suddenly. Visibility is poor. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00633,A slope is moving beside the hiking path and the route looks unsafe. The location is remote.,landslide,3,avoid_crossing_debris
+SYN00634,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00635,A hiker reports cramps and fatigue after a long ascent. Heavy rainfall is present.,dehydration_fatigue,1,stop_in_safe_shade
+SYN00636,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,2,share_gps_location
+SYN00637,The group cannot safely cross a fast-flowing stream. The location is remote.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00638,Hiker twisted an ankle on a rocky trail and cannot walk without help.,injury,3,request_rescue_assistance
+SYN00639,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00640,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00641,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote. Immediate assistance may be needed.",dehydration_fatigue,5,stop_in_safe_shade
+SYN00642,The group has stopped because a member feels faint and overheated. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00643,Debris has fallen across the trail; hikers are close to the slope.,landslide,3,contact_rescue_authority
+SYN00644,Extreme weather makes continuing along the ridge unsafe. The location is remote.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN00645,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00646,Hiker injured after a fall; group requests rescue assistance. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00647,Thunderstorms are approaching and the trail is exposed. Visibility is poor. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00648,One member slipped on wet ground and has a bleeding cut. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00649,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00650,The group encountered a wild animal close to the trail.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00651,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00652,The route is blocked by debris after overnight rain. Heavy rainfall is present. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00653,A wild animal is blocking the path and the hikers are keeping distance. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00654,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN00655,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00656,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00657,We are unsure which trail junction to take and daylight is fading. Heavy rainfall is present.,lost_hiker,2,stay_in_safe_location
+SYN00658,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00659,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,3,share_gps_location
+SYN00660,Water is rising across the trail and the stream crossing looks dangerous. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00661,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN00662,We have lost the marked path and cannot identify our current location. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00663,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00664,The group has stopped because a member feels faint and overheated. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00665,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,2,share_gps_location
+SYN00666,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,3,return_to_known_safe_route_if_safe
+SYN00667,Thunderstorms are approaching and the trail is exposed. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00668,A hiker fell near a steep section and reports severe pain. Heavy rainfall is present. Visibility is poor. The location is remote.,injury,3,share_gps_location
+SYN00669,One member is weak and struggling to continue in the heat. The location is remote.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00670,Flood water blocks the trail and visibility is getting worse.,flooding,3,do_not_cross_fast_water
+SYN00671,Debris has fallen across the trail; hikers are close to the slope.,landslide,3,contact_rescue_authority
+SYN00672,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00673,The hiking path is blocked and the group needs route advice.,trail_blockage,2,contact_trail_authority
+SYN00674,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,1,contact_trail_authority
+SYN00675,The route is blocked by debris after overnight rain. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00676,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN00677,The group has stopped because a member feels faint and overheated. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00678,Fresh earth and rocks have blocked the trail after heavy rain.,landslide,3,contact_rescue_authority
+SYN00679,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00680,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00681,The hiking path is blocked and the group needs route advice.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00682,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,contact_rescue_authority
+SYN00683,The hiking path is blocked and the group needs route advice.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00684,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00685,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00686,The group is lost in mist and needs location assistance.,lost_hiker,2,contact_rescue_authority
+SYN00687,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00688,Debris has fallen across the trail; hikers are close to the slope. The location is remote.,landslide,3,avoid_crossing_debris
+SYN00689,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00690,Heavy rain has flooded the path near the river. Heavy rainfall is present. The location is remote.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00691,The group is lost in mist and needs location assistance. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00692,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote.",dehydration_fatigue,3,stop_in_safe_shade
+SYN00693,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,3,contact_trail_authority
+SYN00694,A wild animal is blocking the path and the hikers are keeping distance. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00695,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN00696,Heavy rain has flooded the path near the river. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00697,Flood water blocks the trail and visibility is getting worse. The location is remote.,flooding,3,contact_rescue_authority
+SYN00698,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,3,contact_trail_authority
+SYN00699,The hiking path is blocked and the group needs route advice.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00700,A hiker is separated from the group and phone battery is low. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN00701,The hiking path is blocked and the group needs route advice. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00702,Thunderstorms are approaching and the trail is exposed. Heavy rainfall is present. The location is remote.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00703,The group is lost in mist and needs location assistance. Heavy rainfall is present.,lost_hiker,2,stay_in_safe_location
+SYN00704,The hikers feel threatened by wildlife near dense vegetation. Heavy rainfall is present. Visibility is poor. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00705,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote.,injury,2,provide_first_aid_if_trained
+SYN00706,We have lost the marked path and cannot identify our current location. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00707,A hiker is separated from the group and phone battery is low. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN00708,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00709,The group is lost in mist and needs location assistance. The location is remote.,lost_hiker,3,share_gps_location
+SYN00710,Heavy rain has flooded the path near the river. The location is remote.,flooding,3,contact_rescue_authority
+SYN00711,One member is weak and struggling to continue in the heat. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00712,Extreme weather makes continuing along the ridge unsafe. The location is remote.,severe_weather,3,contact_rescue_authority
+SYN00713,We are unsure which trail junction to take and daylight is fading. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00714,The group is lost in mist and needs location assistance. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00715,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00716,The hiking path is blocked and the group needs route advice. Heavy rainfall is present.,trail_blockage,2,contact_trail_authority
+SYN00717,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00718,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00719,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN00720,The route is blocked by debris after overnight rain. Heavy rainfall is present. The location is remote.,trail_blockage,3,contact_trail_authority
+SYN00721,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present. Visibility is poor.,trail_blockage,3,contact_trail_authority
+SYN00722,Extreme weather makes continuing along the ridge unsafe. The location is remote.,severe_weather,3,leave_exposed_area_if_safe
+SYN00723,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00724,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00725,Debris has fallen across the trail; hikers are close to the slope. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00726,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,2,contact_trail_authority
+SYN00727,A hiker reports cramps and fatigue after a long ascent. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00728,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00729,The route is blocked by debris after overnight rain.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00730,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present.,trail_blockage,2,contact_trail_authority
+SYN00731,Extreme weather makes continuing along the ridge unsafe. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00732,One member slipped on wet ground and has a bleeding cut. Visibility is poor. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00733,Extreme weather makes continuing along the ridge unsafe. The location is remote.,severe_weather,2,contact_rescue_authority
+SYN00734,Flood water blocks the trail and visibility is getting worse. The location is remote.,flooding,3,do_not_cross_fast_water
+SYN00735,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00736,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00737,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00738,The group is lost in mist and needs location assistance. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN00739,A landslide has blocked the route and the group needs safe guidance. Heavy rainfall is present. Visibility is poor. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00740,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,3,leave_exposed_area_if_safe
+SYN00741,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,provide_first_aid_if_trained
+SYN00742,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00743,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00744,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote.,injury,3,share_gps_location
+SYN00745,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,1,contact_trail_authority
+SYN00746,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,2,contact_medical_help_if_severe
+SYN00747,The group encountered a wild animal close to the trail.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN00748,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00749,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,contact_rescue_authority
+SYN00750,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN00751,One member slipped on wet ground and has a bleeding cut. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00752,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN00753,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote.,trail_blockage,1,contact_trail_authority
+SYN00754,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN00755,A landslide has blocked the route and the group needs safe guidance. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00756,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00757,A hiker is separated from the group and phone battery is low. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00758,Water is rising across the trail and the stream crossing looks dangerous. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00759,We are unsure which trail junction to take and daylight is fading.,lost_hiker,3,share_gps_location
+SYN00760,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00761,The group has stopped because a member feels faint and overheated. Heavy rainfall is present. The location is remote.,dehydration_fatigue,2,share_gps_location
+SYN00762,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,2,contact_trail_authority
+SYN00763,Thunderstorms are approaching and the trail is exposed.,severe_weather,3,leave_exposed_area_if_safe
+SYN00764,The group has stopped because a member feels faint and overheated. Visibility is poor. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00765,A hiker reports cramps and fatigue after a long ascent.,dehydration_fatigue,3,stop_in_safe_shade
+SYN00766,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00767,The group is lost in mist and needs location assistance. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00768,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,3,retreat_slowly_if_safe
+SYN00769,A landslide has blocked the route and the group needs safe guidance. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00770,Flood water blocks the trail and visibility is getting worse. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00771,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00772,Flood water blocks the trail and visibility is getting worse. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00773,Hiker injured after a fall; group requests rescue assistance. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00774,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,2,contact_rescue_authority
+SYN00775,We have lost the marked path and cannot identify our current location. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00776,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00777,Heavy rain has flooded the path near the river. The location is remote.,flooding,3,do_not_cross_fast_water
+SYN00778,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,provide_first_aid_if_trained
+SYN00779,Debris has fallen across the trail; hikers are close to the slope. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00780,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote.,landslide,3,avoid_crossing_debris
+SYN00781,The hiking path is blocked and the group needs route advice.,trail_blockage,3,contact_trail_authority
+SYN00782,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00783,A hiker reports cramps and fatigue after a long ascent.,dehydration_fatigue,2,contact_medical_help_if_severe
+SYN00784,One member slipped on wet ground and has a bleeding cut. Heavy rainfall is present.,injury,3,request_rescue_assistance
+SYN00785,Hiker injured after a fall; group requests rescue assistance. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00786,Flood water blocks the trail and visibility is getting worse. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00787,Heavy rain has flooded the path near the river. The location is remote.,flooding,3,contact_rescue_authority
+SYN00788,One member is weak and struggling to continue in the heat. The location is remote.,dehydration_fatigue,2,share_gps_location
+SYN00789,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00790,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00791,The group encountered a wild animal close to the trail. Heavy rainfall is present. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00792,The group encountered a wild animal close to the trail.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00793,A bridge on the trail appears damaged and cannot be crossed safely. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00794,A slope is moving beside the hiking path and the route looks unsafe. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00795,Thunderstorms are approaching and the trail is exposed.,severe_weather,3,contact_rescue_authority
+SYN00796,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN00797,Extreme weather makes continuing along the ridge unsafe.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN00798,Fresh earth and rocks have blocked the trail after heavy rain.,landslide,3,move_away_from_slope_if_safe
+SYN00799,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00800,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,avoid_crossing_debris
+SYN00801,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00802,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN00803,One member slipped on wet ground and has a bleeding cut. Visibility is poor. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00804,Hiker injured after a fall; group requests rescue assistance. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00805,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00806,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,3,do_not_cross_unsafe_obstacle
+SYN00807,We have lost the marked path and cannot identify our current location. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00808,A hiker is separated from the group and phone battery is low.,lost_hiker,3,contact_rescue_authority
+SYN00809,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00810,Debris has fallen across the trail; hikers are close to the slope. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00811,Hiker twisted an ankle on a rocky trail and cannot walk without help. Visibility is poor. The location is remote.,injury,2,provide_first_aid_if_trained
+SYN00812,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00813,The group encountered a wild animal close to the trail. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00814,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00815,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00816,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00817,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00818,The route is blocked by debris after overnight rain.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00819,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00820,A hiker fell near a steep section and reports severe pain. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00821,We have lost the marked path and cannot identify our current location.,lost_hiker,3,share_gps_location
+SYN00822,The group is lost in mist and needs location assistance.,lost_hiker,3,stay_in_safe_location
+SYN00823,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,3,stop_in_safe_shade
+SYN00824,A hiker fell near a steep section and reports severe pain.,injury,3,request_rescue_assistance
+SYN00825,Heavy rain has flooded the path near the river. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00826,Water is rising across the trail and the stream crossing looks dangerous. Visibility is poor. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00827,Fresh earth and rocks have blocked the trail after heavy rain.,landslide,3,move_away_from_slope_if_safe
+SYN00828,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00829,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,3,stop_in_safe_shade
+SYN00830,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00831,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,2,contact_medical_help_if_severe
+SYN00832,Heavy rain has flooded the path near the river. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00833,Water is rising across the trail and the stream crossing looks dangerous.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00834,Water is rising across the trail and the stream crossing looks dangerous.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00835,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,3,contact_trail_authority
+SYN00836,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00837,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,3,contact_trail_authority
+SYN00838,The group is cold and visibility has dropped suddenly.,severe_weather,2,contact_rescue_authority
+SYN00839,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote.,landslide,3,contact_rescue_authority
+SYN00840,Debris has fallen across the trail; hikers are close to the slope. The location is remote.,landslide,3,contact_rescue_authority
+SYN00841,We are unsure which trail junction to take and daylight is fading. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00842,Flood water blocks the trail and visibility is getting worse. The location is remote.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00843,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,1,share_gps_location
+SYN00844,The group is lost in mist and needs location assistance. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN00845,A hiker is separated from the group and phone battery is low.,lost_hiker,2,contact_rescue_authority
+SYN00846,The route is blocked by debris after overnight rain. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00847,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00848,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00849,The group encountered a wild animal close to the trail.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN00850,Water is rising across the trail and the stream crossing looks dangerous. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00851,A slope is moving beside the hiking path and the route looks unsafe. The location is remote.,landslide,3,contact_rescue_authority
+SYN00852,We have lost the marked path and cannot identify our current location.,lost_hiker,3,contact_rescue_authority
+SYN00853,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00854,The group is cold and visibility has dropped suddenly.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN00855,The hikers feel threatened by wildlife near dense vegetation. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00856,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00857,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00858,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00859,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,3,do_not_cross_unsafe_obstacle
+SYN00860,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN00861,Thunderstorms are approaching and the trail is exposed. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00862,The group encountered a wild animal close to the trail. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00863,Heavy rain has flooded the path near the river. The location is remote.,flooding,3,do_not_cross_fast_water
+SYN00864,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00865,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00866,Extreme weather makes continuing along the ridge unsafe. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00867,The hiking path is blocked and the group needs route advice. Visibility is poor.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00868,A slope is moving beside the hiking path and the route looks unsafe. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00869,A hiker is separated from the group and phone battery is low. The location is remote.,lost_hiker,2,share_gps_location
+SYN00870,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00871,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00872,The group is lost in mist and needs location assistance. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00873,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00874,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00875,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00876,Thunderstorms are approaching and the trail is exposed. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00877,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00878,The group is lost in mist and needs location assistance.,lost_hiker,2,stay_in_safe_location
+SYN00879,"A hiker is dizzy, exhausted and has very little water remaining. Visibility is poor.",dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00880,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00881,The hikers feel threatened by wildlife near dense vegetation. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00882,The hiking path is blocked and the group needs route advice.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00883,A wildlife encounter has made the trail unsafe to continue. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00884,A bridge on the trail appears damaged and cannot be crossed safely. The location is remote.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00885,A slope is moving beside the hiking path and the route looks unsafe. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00886,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00887,"A hiker is dizzy, exhausted and has very little water remaining. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00888,Debris has fallen across the trail; hikers are close to the slope. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00889,A landslide has blocked the route and the group needs safe guidance. Heavy rainfall is present. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00890,One member is weak and struggling to continue in the heat. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00891,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00892,The hikers feel threatened by wildlife near dense vegetation.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN00893,A fallen tree blocks the marked trail and no safe bypass is obvious. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00894,One member is weak and struggling to continue in the heat.,dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00895,One member slipped on wet ground and has a bleeding cut.,injury,2,share_gps_location
+SYN00896,Strong winds and heavy rain have reduced visibility on the ridge. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00897,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,3,contact_rescue_authority
+SYN00898,Strong winds and heavy rain have reduced visibility on the ridge.,severe_weather,3,leave_exposed_area_if_safe
+SYN00899,"A hiker is dizzy, exhausted and has very little water remaining. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00900,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00901,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00902,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00903,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,3,share_gps_location
+SYN00904,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00905,One member is weak and struggling to continue in the heat.,dehydration_fatigue,2,share_gps_location
+SYN00906,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00907,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,2,provide_first_aid_if_trained
+SYN00908,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,avoid_crossing_debris
+SYN00909,A hiker reports cramps and fatigue after a long ascent. The location is remote.,dehydration_fatigue,3,stop_in_safe_shade
+SYN00910,Thunderstorms are approaching and the trail is exposed.,severe_weather,3,contact_rescue_authority
+SYN00911,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,3,request_rescue_assistance
+SYN00912,A hiker is separated from the group and phone battery is low. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN00913,One member slipped on wet ground and has a bleeding cut. Heavy rainfall is present. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00914,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00915,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00916,The group is lost in mist and needs location assistance. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00917,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,3,share_gps_location
+SYN00918,A wild animal is blocking the path and the hikers are keeping distance. Visibility is poor. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00919,A hiker is separated from the group and phone battery is low.,lost_hiker,2,share_gps_location
+SYN00920,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00921,Debris has fallen across the trail; hikers are close to the slope. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00922,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,move_away_from_slope_if_safe
+SYN00923,The hiking path is blocked and the group needs route advice.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00924,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00925,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00926,A hiker is separated from the group and phone battery is low.,lost_hiker,2,contact_rescue_authority
+SYN00927,Water is rising across the trail and the stream crossing looks dangerous.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00928,A slope is moving beside the hiking path and the route looks unsafe. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00929,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00930,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,3,keep_distance_and_do_not_approach
+SYN00931,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00932,The group has stopped because a member feels faint and overheated. Heavy rainfall is present.,dehydration_fatigue,2,stop_in_safe_shade
+SYN00933,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN00934,A wildlife encounter has made the trail unsafe to continue. Visibility is poor.,wildlife_encounter,1,retreat_slowly_if_safe
+SYN00935,Hiker injured after a fall; group requests rescue assistance.,injury,2,provide_first_aid_if_trained
+SYN00936,A slope is moving beside the hiking path and the route looks unsafe. Heavy rainfall is present. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00937,Debris has fallen across the trail; hikers are close to the slope. The location is remote.,landslide,3,avoid_crossing_debris
+SYN00938,Hiker injured after a fall; group requests rescue assistance. Heavy rainfall is present.,injury,2,provide_first_aid_if_trained
+SYN00939,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,3,contact_medical_help_if_severe
+SYN00940,One member is weak and struggling to continue in the heat. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00941,A hiker is separated from the group and phone battery is low.,lost_hiker,3,share_gps_location
+SYN00942,Water is rising across the trail and the stream crossing looks dangerous. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00943,Extreme weather makes continuing along the ridge unsafe.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN00944,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote.",dehydration_fatigue,3,stop_in_safe_shade
+SYN00945,A hiker is separated from the group and phone battery is low.,lost_hiker,2,share_gps_location
+SYN00946,The group encountered a wild animal close to the trail.,wildlife_encounter,3,retreat_slowly_if_safe
+SYN00947,The group is cold and visibility has dropped suddenly. Heavy rainfall is present. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00948,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN00949,A hiker is separated from the group and phone battery is low.,lost_hiker,2,stay_in_safe_location
+SYN00950,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,2,contact_trail_authority
+SYN00951,The hikers feel threatened by wildlife near dense vegetation. Visibility is poor. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00952,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,3,contact_rescue_authority
+SYN00953,Heavy rain has flooded the path near the river.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00954,Extreme weather makes continuing along the ridge unsafe. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00955,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN00956,A hiker is separated from the group and phone battery is low. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00957,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN00958,One member is weak and struggling to continue in the heat. Heavy rainfall is present. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN00959,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,2,leave_exposed_area_if_safe
+SYN00960,One member is weak and struggling to continue in the heat. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00961,One member is weak and struggling to continue in the heat. Heavy rainfall is present. The location is remote.,dehydration_fatigue,2,contact_medical_help_if_severe
+SYN00962,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN00963,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00964,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00965,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN00966,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00967,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN00968,The group encountered a wild animal close to the trail. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00969,Thunderstorms are approaching and the trail is exposed.,severe_weather,3,contact_rescue_authority
+SYN00970,We have lost the marked path and cannot identify our current location. Heavy rainfall is present. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN00971,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00972,A hiker fell near a steep section and reports severe pain. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN00973,The group is lost in mist and needs location assistance.,lost_hiker,2,stay_in_safe_location
+SYN00974,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00975,Thunderstorms are approaching and the trail is exposed. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00976,The group encountered a wild animal close to the trail. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN00977,One member is weak and struggling to continue in the heat. The location is remote.,dehydration_fatigue,2,share_gps_location
+SYN00978,"A hiker is dizzy, exhausted and has very little water remaining. Heavy rainfall is present. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN00979,Debris has fallen across the trail; hikers are close to the slope. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN00980,We are unsure which trail junction to take and daylight is fading. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN00981,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,share_gps_location
+SYN00982,One member is weak and struggling to continue in the heat. The location is remote.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN00983,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00984,The hiking path is blocked and the group needs route advice.,trail_blockage,3,return_to_known_safe_route_if_safe
+SYN00985,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN00986,"A hiker is dizzy, exhausted and has very little water remaining. Heavy rainfall is present.",dehydration_fatigue,2,stop_in_safe_shade
+SYN00987,The group encountered a wild animal close to the trail.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN00988,Flood water blocks the trail and visibility is getting worse. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00989,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN00990,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN00991,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN00992,The route is blocked by debris after overnight rain. Heavy rainfall is present.,trail_blockage,3,contact_trail_authority
+SYN00993,The route is blocked by debris after overnight rain. Heavy rainfall is present. The location is remote.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN00994,A landslide has blocked the route and the group needs safe guidance. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN00995,The group is lost in mist and needs location assistance. The location is remote.,lost_hiker,3,share_gps_location
+SYN00996,The route is blocked by debris after overnight rain. Heavy rainfall is present. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN00997,A bridge on the trail appears damaged and cannot be crossed safely. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN00998,Water is rising across the trail and the stream crossing looks dangerous.,flooding,3,move_to_safe_high_ground_if_safe
+SYN00999,The route is blocked by debris after overnight rain.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN01000,Thunderstorms are approaching and the trail is exposed.,severe_weather,2,contact_rescue_authority
+SYN01001,A wild animal is blocking the path and the hikers are keeping distance. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN01002,We have lost the marked path and cannot identify our current location.,lost_hiker,2,contact_rescue_authority
+SYN01003,A hiker is separated from the group and phone battery is low.,lost_hiker,2,share_gps_location
+SYN01004,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,3,leave_exposed_area_if_safe
+SYN01005,Extreme weather makes continuing along the ridge unsafe. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN01006,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,2,provide_first_aid_if_trained
+SYN01007,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN01008,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN01009,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,stay_in_safe_location
+SYN01010,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN01011,The group has stopped because a member feels faint and overheated. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN01012,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,1,contact_trail_authority
+SYN01013,A hiker fell near a steep section and reports severe pain. The location is remote. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN01014,Water is rising across the trail and the stream crossing looks dangerous. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN01015,The group encountered a wild animal close to the trail. Heavy rainfall is present. The location is remote.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN01016,Fresh earth and rocks have blocked the trail after heavy rain.,landslide,3,avoid_crossing_debris
+SYN01017,We have lost the marked path and cannot identify our current location. Heavy rainfall is present. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN01018,Hiker injured after a fall; group requests rescue assistance. Heavy rainfall is present.,injury,3,share_gps_location
+SYN01019,Thunderstorms are approaching and the trail is exposed. The location is remote.,severe_weather,3,leave_exposed_area_if_safe
+SYN01020,Heavy rain has flooded the path near the river. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01021,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,2,contact_trail_authority
+SYN01022,The hiking path is blocked and the group needs route advice.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN01023,We have lost the marked path and cannot identify our current location. Heavy rainfall is present.,lost_hiker,2,stay_in_safe_location
+SYN01024,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN01025,Fresh earth and rocks have blocked the trail after heavy rain. The location is remote.,landslide,3,avoid_crossing_debris
+SYN01026,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN01027,The group is cold and visibility has dropped suddenly. The location is remote.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN01028,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,3,do_not_cross_unsafe_obstacle
+SYN01029,Water is rising across the trail and the stream crossing looks dangerous. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01030,The group is lost in mist and needs location assistance.,lost_hiker,2,share_gps_location
+SYN01031,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN01032,The group is lost in mist and needs location assistance. Heavy rainfall is present.,lost_hiker,3,contact_rescue_authority
+SYN01033,A hiker reports cramps and fatigue after a long ascent.,dehydration_fatigue,2,share_gps_location
+SYN01034,Extreme weather makes continuing along the ridge unsafe. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN01035,A hiker is separated from the group and phone battery is low. The location is remote.,lost_hiker,3,contact_rescue_authority
+SYN01036,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,3,provide_first_aid_if_trained
+SYN01037,Debris has fallen across the trail; hikers are close to the slope. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN01038,The group is cold and visibility has dropped suddenly. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN01039,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,1,stop_in_safe_shade
+SYN01040,A hiker reports cramps and fatigue after a long ascent. Heavy rainfall is present. Visibility is poor. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN01041,Strong winds and heavy rain have reduced visibility on the ridge. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN01042,Fresh earth and rocks have blocked the trail after heavy rain. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN01043,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN01044,A landslide has blocked the route and the group needs safe guidance. The location is remote.,landslide,3,avoid_crossing_debris
+SYN01045,The group is cold and visibility has dropped suddenly. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN01046,"A hiker is dizzy, exhausted and has very little water remaining. Heavy rainfall is present.",dehydration_fatigue,1,stop_in_safe_shade
+SYN01047,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,2,contact_trail_authority
+SYN01048,Fresh earth and rocks have blocked the trail after heavy rain. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN01049,Thunderstorms are approaching and the trail is exposed. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN01050,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN01051,A hiker reports cramps and fatigue after a long ascent.,dehydration_fatigue,2,stop_in_safe_shade
+SYN01052,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present. Visibility is poor.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN01053,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,3,return_to_known_safe_route_if_safe
+SYN01054,Heavy rain has flooded the path near the river. The location is remote.,flooding,3,do_not_cross_fast_water
+SYN01055,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN01056,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,3,contact_trail_authority
+SYN01057,Hiker twisted an ankle on a rocky trail and cannot walk without help.,injury,2,request_rescue_assistance
+SYN01058,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,3,contact_trail_authority
+SYN01059,The group is cold and visibility has dropped suddenly. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN01060,The group has stopped because a member feels faint and overheated. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN01061,Hiker twisted an ankle on a rocky trail and cannot walk without help. Immediate assistance may be needed.,injury,4,request_rescue_assistance
+SYN01062,A landslide has blocked the route and the group needs safe guidance.,landslide,3,contact_rescue_authority
+SYN01063,Debris has fallen across the trail; hikers are close to the slope. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN01064,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,3,contact_trail_authority
+SYN01065,A slope is moving beside the hiking path and the route looks unsafe. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN01066,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote. Immediate assistance may be needed.",dehydration_fatigue,5,stop_in_safe_shade
+SYN01067,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,share_gps_location
+SYN01068,One member is weak and struggling to continue in the heat.,dehydration_fatigue,1,contact_medical_help_if_severe
+SYN01069,The group encountered a wild animal close to the trail. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN01070,The group encountered a wild animal close to the trail.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN01071,A wild animal is blocking the path and the hikers are keeping distance. Heavy rainfall is present. The location is remote.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN01072,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN01073,The group is lost in mist and needs location assistance. Heavy rainfall is present.,lost_hiker,2,stay_in_safe_location
+SYN01074,The group encountered a wild animal close to the trail. Visibility is poor. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN01075,Water is rising across the trail and the stream crossing looks dangerous. Heavy rainfall is present. Visibility is poor. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01076,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,1,contact_trail_authority
+SYN01077,The group encountered a wild animal close to the trail. Heavy rainfall is present. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN01078,The route is blocked by debris after overnight rain. The location is remote.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN01079,A slope is moving beside the hiking path and the route looks unsafe. Heavy rainfall is present. Visibility is poor. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN01080,A wildlife encounter has made the trail unsafe to continue. Heavy rainfall is present.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN01081,The group encountered a wild animal close to the trail. Heavy rainfall is present.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN01082,One member slipped on wet ground and has a bleeding cut.,injury,3,share_gps_location
+SYN01083,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN01084,A hiker fell near a steep section and reports severe pain.,injury,3,share_gps_location
+SYN01085,A wild animal is blocking the path and the hikers are keeping distance. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN01086,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,avoid_crossing_debris
+SYN01087,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote.,injury,3,request_rescue_assistance
+SYN01088,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN01089,Strong winds and heavy rain have reduced visibility on the ridge. The location is remote.,severe_weather,3,seek_shelter_without_entering_hazard_zone
+SYN01090,A hiker fell near a steep section and reports severe pain. Heavy rainfall is present. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN01091,A landslide has blocked the route and the group needs safe guidance. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN01092,A hiker is separated from the group and phone battery is low.,lost_hiker,3,stay_in_safe_location
+SYN01093,Water is rising across the trail and the stream crossing looks dangerous. The location is remote.,flooding,3,contact_rescue_authority
+SYN01094,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,1,do_not_cross_unsafe_obstacle
+SYN01095,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,3,stop_in_safe_shade
+SYN01096,A hiker fell near a steep section and reports severe pain.,injury,2,provide_first_aid_if_trained
+SYN01097,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN01098,We have lost the marked path and cannot identify our current location. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01099,Water is rising across the trail and the stream crossing looks dangerous.,flooding,3,move_to_safe_high_ground_if_safe
+SYN01100,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,2,contact_local_authorities_if_threat_persists
+SYN01101,A wildlife encounter has made the trail unsafe to continue.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN01102,Thunderstorms are approaching and the trail is exposed. Heavy rainfall is present. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN01103,A wild animal is blocking the path and the hikers are keeping distance. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN01104,We have lost the marked path and cannot identify our current location.,lost_hiker,3,stay_in_safe_location
+SYN01105,The group has stopped because a member feels faint and overheated. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN01106,The group has stopped because a member feels faint and overheated. The location is remote.,dehydration_fatigue,2,contact_medical_help_if_severe
+SYN01107,"A hiker is dizzy, exhausted and has very little water remaining. The location is remote. Immediate assistance may be needed.",dehydration_fatigue,4,stop_in_safe_shade
+SYN01108,A wild animal is blocking the path and the hikers are keeping distance. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN01109,A hiker fell near a steep section and reports severe pain. The location is remote.,injury,3,request_rescue_assistance
+SYN01110,"A hiker is dizzy, exhausted and has very little water remaining.",dehydration_fatigue,2,contact_medical_help_if_severe
+SYN01111,A slope is moving beside the hiking path and the route looks unsafe. Visibility is poor. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN01112,A bridge on the trail appears damaged and cannot be crossed safely. Visibility is poor. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN01113,The group cannot safely cross a fast-flowing stream. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01114,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01115,The route is blocked by debris after overnight rain. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN01116,Flood water blocks the trail and visibility is getting worse. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01117,The group encountered a wild animal close to the trail.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN01118,Flood water blocks the trail and visibility is getting worse. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01119,A fallen tree blocks the marked trail and no safe bypass is obvious.,trail_blockage,2,return_to_known_safe_route_if_safe
+SYN01120,Thunderstorms are approaching and the trail is exposed.,severe_weather,3,leave_exposed_area_if_safe
+SYN01121,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN01122,The group encountered a wild animal close to the trail.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN01123,The route is blocked by debris after overnight rain.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN01124,A hiker reports cramps and fatigue after a long ascent. Heavy rainfall is present. Visibility is poor.,dehydration_fatigue,3,contact_medical_help_if_severe
+SYN01125,The group is lost in mist and needs location assistance. Heavy rainfall is present. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01126,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN01127,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,3,contact_rescue_authority
+SYN01128,We have lost the marked path and cannot identify our current location. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01129,A bridge on the trail appears damaged and cannot be crossed safely. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN01130,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN01131,The group has stopped because a member feels faint and overheated. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN01132,We are unsure which trail junction to take and daylight is fading.,lost_hiker,3,contact_rescue_authority
+SYN01133,Thunderstorms are approaching and the trail is exposed. Immediate assistance may be needed.,severe_weather,4,leave_exposed_area_if_safe
+SYN01134,A bridge on the trail appears damaged and cannot be crossed safely.,trail_blockage,3,contact_trail_authority
+SYN01135,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,1,contact_local_authorities_if_threat_persists
+SYN01136,Heavy rain has flooded the path near the river. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN01137,A wild animal is blocking the path and the hikers are keeping distance. Heavy rainfall is present. The location is remote.,wildlife_encounter,1,keep_distance_and_do_not_approach
+SYN01138,A bridge on the trail appears damaged and cannot be crossed safely. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN01139,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,contact_rescue_authority
+SYN01140,The group is lost in mist and needs location assistance. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01141,Thunderstorms are approaching and the trail is exposed. Heavy rainfall is present.,severe_weather,2,contact_rescue_authority
+SYN01142,Heavy rain has flooded the path near the river. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN01143,A hiker is separated from the group and phone battery is low. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01144,One member slipped on wet ground and has a bleeding cut.,injury,2,request_rescue_assistance
+SYN01145,Heavy rain has flooded the path near the river.,flooding,3,do_not_cross_fast_water
+SYN01146,Flood water blocks the trail and visibility is getting worse. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN01147,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,contact_rescue_authority
+SYN01148,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,contact_rescue_authority
+SYN01149,Hiker twisted an ankle on a rocky trail and cannot walk without help. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN01150,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,2,do_not_cross_unsafe_obstacle
+SYN01151,Debris has fallen across the trail; hikers are close to the slope. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN01152,Fresh earth and rocks have blocked the trail after heavy rain.,landslide,3,contact_rescue_authority
+SYN01153,Water is rising across the trail and the stream crossing looks dangerous. Heavy rainfall is present. The location is remote. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN01154,A slope is moving beside the hiking path and the route looks unsafe.,landslide,3,avoid_crossing_debris
+SYN01155,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01156,The group cannot safely cross a fast-flowing stream. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01157,A landslide has blocked the route and the group needs safe guidance. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN01158,The group encountered a wild animal close to the trail. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN01159,We have lost the marked path and cannot identify our current location. Visibility is poor. The location is remote.,lost_hiker,3,share_gps_location
+SYN01160,Extreme weather makes continuing along the ridge unsafe.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN01161,Hiker twisted an ankle on a rocky trail and cannot walk without help.,injury,2,request_rescue_assistance
+SYN01162,A landslide has blocked the route and the group needs safe guidance. The location is remote. Immediate assistance may be needed.,landslide,5,move_away_from_slope_if_safe
+SYN01163,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,3,provide_first_aid_if_trained
+SYN01164,A wild animal is blocking the path and the hikers are keeping distance. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN01165,We are unsure which trail junction to take and daylight is fading.,lost_hiker,2,contact_rescue_authority
+SYN01166,A hiker is separated from the group and phone battery is low. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01167,Hiker injured after a fall; group requests rescue assistance. The location is remote.,injury,3,request_rescue_assistance
+SYN01168,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN01169,A hiker fell near a steep section and reports severe pain. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN01170,A hiker is separated from the group and phone battery is low. The location is remote.,lost_hiker,2,stay_in_safe_location
+SYN01171,A hiker is separated from the group and phone battery is low.,lost_hiker,3,stay_in_safe_location
+SYN01172,We are unsure which trail junction to take and daylight is fading.,lost_hiker,3,contact_rescue_authority
+SYN01173,A hiker is separated from the group and phone battery is low. Visibility is poor. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01174,The route is blocked by debris after overnight rain. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN01175,We are unsure which trail junction to take and daylight is fading.,lost_hiker,3,share_gps_location
+SYN01176,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle
+SYN01177,The hiking path is blocked and the group needs route advice. The location is remote.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN01178,The group encountered a wild animal close to the trail. The location is remote.,wildlife_encounter,3,contact_local_authorities_if_threat_persists
+SYN01179,Thunderstorms are approaching and the trail is exposed.,severe_weather,2,seek_shelter_without_entering_hazard_zone
+SYN01180,The group is lost in mist and needs location assistance. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01181,The group is lost in mist and needs location assistance. The location is remote. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01182,A wildlife encounter has made the trail unsafe to continue. The location is remote.,wildlife_encounter,3,retreat_slowly_if_safe
+SYN01183,The route is blocked by debris after overnight rain.,trail_blockage,1,return_to_known_safe_route_if_safe
+SYN01184,One member is weak and struggling to continue in the heat. The location is remote. Immediate assistance may be needed.,dehydration_fatigue,4,stop_in_safe_shade
+SYN01185,Fresh earth and rocks have blocked the trail after heavy rain. Heavy rainfall is present. Visibility is poor. Immediate assistance may be needed.,landslide,4,move_away_from_slope_if_safe
+SYN01186,A hiker reports cramps and fatigue after a long ascent. Immediate assistance may be needed.,dehydration_fatigue,5,stop_in_safe_shade
+SYN01187,Heavy rain has flooded the path near the river. Immediate assistance may be needed.,flooding,4,do_not_cross_fast_water
+SYN01188,We are unsure which trail junction to take and daylight is fading. Immediate assistance may be needed.,lost_hiker,4,share_gps_location
+SYN01189,The hikers feel threatened by wildlife near dense vegetation. The location is remote. Immediate assistance may be needed.,wildlife_encounter,4,keep_distance_and_do_not_approach
+SYN01190,A hiker fell near a steep section and reports severe pain. The location is remote. Immediate assistance may be needed.,injury,5,request_rescue_assistance
+SYN01191,The hikers feel threatened by wildlife near dense vegetation. The location is remote.,wildlife_encounter,2,retreat_slowly_if_safe
+SYN01192,A hiker fell near a steep section and reports severe pain.,injury,3,share_gps_location
+SYN01193,Debris has fallen across the trail; hikers are close to the slope. Heavy rainfall is present.,landslide,3,contact_rescue_authority
+SYN01194,We have lost the marked path and cannot identify our current location.,lost_hiker,2,stay_in_safe_location
+SYN01195,The group has stopped because a member feels faint and overheated.,dehydration_fatigue,2,stop_in_safe_shade
+SYN01196,Thunderstorms are approaching and the trail is exposed. The location is remote. Immediate assistance may be needed.,severe_weather,5,leave_exposed_area_if_safe
+SYN01197,Flood water blocks the trail and visibility is getting worse. The location is remote. Immediate assistance may be needed.,flooding,5,do_not_cross_fast_water
+SYN01198,A wild animal is blocking the path and the hikers are keeping distance.,wildlife_encounter,2,keep_distance_and_do_not_approach
+SYN01199,We have lost the marked path and cannot identify our current location. The location is remote.,lost_hiker,3,stay_in_safe_location
+SYN01200,A fallen tree blocks the marked trail and no safe bypass is obvious. The location is remote. Immediate assistance may be needed.,trail_blockage,4,do_not_cross_unsafe_obstacle

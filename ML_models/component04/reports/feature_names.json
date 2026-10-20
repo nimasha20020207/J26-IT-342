@@ -1,0 +1,19 @@
+[
+  "elevation_m",
+  "slope_degrees",
+  "rainfall_mm",
+  "temperature_c",
+  "wind_speed_kmh",
+  "visibility_pct",
+  "hours_hiking",
+  "distance_from_trailhead_km",
+  "phone_battery_pct",
+  "fatigue_score_1_10",
+  "water_remaining_l",
+  "remote_area",
+  "terrain_type_forest",
+  "terrain_type_grassland",
+  "terrain_type_ridge",
+  "terrain_type_rocky",
+  "terrain_type_steep"
+]

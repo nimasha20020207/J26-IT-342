@@ -1,498 +1,152 @@
-# Venture: Adaptive Multi-Source Reliability-Aware Environmental Hazard Forecasting and Recommendation System
-
-## Overview
-
-Venture is a mobile-based intelligent environmental hazard forecasting and decision-support platform developed as part of the IT342 Final Year Research Project.
-
-The system combines multiple environmental, social, and historical hazard information sources to provide reliable hazard forecasting, risk awareness, and personalized recommendations. The platform addresses the limitations of traditional hazard forecasting systems by incorporating reliability-aware data fusion, social hazard intelligence, machine learning forecasting, and user-centric recommendation generation.
-
-The system is designed to support travellers, hikers, outdoor enthusiasts, local authorities, and the general public by providing timely environmental risk insights and adaptive recommendations.
+# Venture: Explainable Multi-Modal AI for Risk-Aware Personalized Hiking in Sri Lanka
+## Component 4: Context-Aware Emergency Detection and Response Recommendation System
+**Student**: Mihiranga U.G.P.G. (IT23309142)  
+**Supervisor**: Mrs. Lokesha Weerasinghe | **Co-Supervisor**: Ms. Lashika Chamini  
+**Project Group**: J26-IT-342  
+**Affiliation**: Sri Lanka Institute of Information Technology (SLIIT), Department of Information Technology  
 
 ---
 
-# Problem Statement
+## 1. Project Overview & Scope
+Hiking in Sri Lanka's mountainous terrains (Knuckles, Horton Plains, Adam's Peak, Ella Rock, Sinharaja, Riverston, Pidurangala) involves dynamic environmental risks such as sudden tropical cloudbursts, landslides, trail blockages, steep drop-offs, and communication dropouts. 
 
-Traditional environmental hazard forecasting systems primarily rely on environmental sensor data and weather observations. However, they often overlook valuable information present in social media discussions, public reports, and community observations.
-
-Additionally, different information sources vary significantly in reliability and quality. As a result, hazard warnings generated from multiple sources may contain uncertainty and inconsistencies.
-
-This research aims to develop a reliability-aware multi-source forecasting system capable of:
-
-- Integrating environmental and social information sources
-- Assessing source credibility
-- Detecting emerging hazard signals
-- Generating adaptive hazard forecasts
-- Providing actionable recommendations through a mobile application
+**Component 4** provides intelligent, context-aware emergency decision support during the emergency stage of a hike by combining:
+1. **Unstructured Incident Text NLP**: Extracts emergency categories, severity indicators, and assistance needs.
+2. **Machine Learning Pipeline**: Multi-class emergency classification and severity estimation comparing **Random Forest (Baseline 1)** and **XGBoost (Baseline 2)** with 5-Fold Stratified Cross-Validation.
+3. **Domain Knowledge Graph Reasoning**: NetworkX-based ontology connecting environmental context, hazards, resources, and response actions with explainable traversal paths.
+4. **Explainable AI (XAI)**: SHAP (SHapley Additive exPlanations) TreeExplainer factor attribution providing transparent rationale for emergency predictions.
+5. **Geospatial Emergency Resource Locator**: Haversine distance and mountain response time calculation to verified Sri Lankan hospitals, DWC wildlife ranger posts, and police stations.
+6. **Mobile Application**: Flutter frontend (`venture_mobileapp`) providing responsive screens for reporting, analysis, assessment, context telemetry, recommendations, resources, XAI insights, and SOS dispatch.
 
 ---
 
-# Research Objectives
-
-## Main Objective
-
-Develop an adaptive multi-source environmental hazard forecasting and recommendation system that combines environmental data, historical hazard records, and social intelligence using reliability-aware data fusion techniques.
-
-## Specific Objectives
-
-### Objective 01
-
-Collect, process, and integrate environmental and historical hazard datasets.
-
-### Objective 02
-
-Develop an adaptive reliability-aware data fusion framework to improve forecasting accuracy.
-
-### Objective 03
-
-Analyze social media and public reports to identify emerging environmental hazards.
-
-### Objective 04
-
-Generate intelligent recommendations and visualizations to support user decision-making.
-
----
-
-# Research Components
-
-## Component 01 – Environmental Data Processing Module
-
-### Responsibilities
-
-- Weather data collection
-- Environmental feature generation
-- Historical data integration
-- Environmental risk extraction
-- Data preprocessing
-
-### Inputs
-
-- Rainfall
-- Temperature
-- Humidity
-- Wind Speed
-- Atmospheric Pressure
-
-### Outputs
-
-- Environmental Feature Set
-- Risk Indicators
-
----
-
-## Component 02 – Adaptive Reliability-Aware Multi-Source Fusion Module
-
-### Responsibilities
-
-- Reliability assessment
-- Credibility scoring
-- Confidence estimation
-- Dynamic weighting
-- Multi-source information fusion
-- Hazard forecasting
-
-### Inputs
-
-- Environmental features
-- Social signals
-- Hazard history
-
-### Outputs
-
-- Reliability scores
-- Fused risk vectors
-- Hazard predictions
-
----
-
-## Component 03 – Social Hazard Intelligence Module
-
-### Responsibilities
-
-- Social data collection
-- NLP analysis
-- Hazard signal detection
-- Topic modelling
-- Information extraction
-
-### Inputs
-
-- Social media content
-- News articles
-- Community reports
-
-### Outputs
-
-- Hazard indicators
-- Social risk signals
-- Confidence scores
-
----
-
-## Component 04 – Recommendation and Visualization Module
-
-### Responsibilities
-
-- Recommendation generation
-- Risk communication
-- Hazard visualization
-- User support features
-- Interactive heatmaps
-
-### Outputs
-
-- Personalised recommendations
-- Safety alerts
-- Visual analytics
-- Risk maps
-
----
-
-# End-to-End System Workflow
+## 2. System Architecture
 
 ```text
-Environmental Data Sources
-            │
-            ▼
-
-Data Collection Layer
-
-            │
-            ▼
-
-Data Preprocessing Layer
-
-            │
-
- ┌──────────┴──────────┐
-
- ▼                     ▼
-
-Component 01     Component 03
-Environmental    Social Hazard
-Processing       Detection
-
-        │         │
-
-        └────┬────┘
-
-             ▼
-
-Component 02
-Reliability Assessment
-
-             ▼
-
-Adaptive Data Fusion
-
-             ▼
-
-Hazard Prediction Engine
-
-             ▼
-
-Component 04
-Recommendation Engine
-
-             ▼
-
-PostgreSQL Storage
-
-             ▼
-
-FastAPI APIs
-
-             ▼
-
-React Native Mobile App
-
-             ▼
-
-User Dashboard & Heatmaps
+               +-------------------------------------------------------------+
+               |                         INPUT LAYER                         |
+               | Incident Text | GPS Coordinates | Telemetry | Terrain Data  |
+               +------------------------------+------------------------------+
+                                              |
+                                              v
+               +-------------------------------------------------------------+
+               |            DATA PROCESSING & CONTEXT CONSTRUCTION           |
+               |      Cleaning | Feature Pipeline | NLP Indicator Extraction |
+               +------------------------------+------------------------------+
+                                              |
+                                              v
+               +-------------------------------------------------------------+
+               |                  AI / ML EMERGENCY DETECTION                |
+               |  Random Forest & XGBoost Classifiers | Severity Regressor   |
+               +------------------------------+------------------------------+
+                                              |
+                                              v
+               +-------------------------------------------------------------+
+               |                    DECISION SUPPORT LAYER                   |
+               | NetworkX Knowledge Graph Traversal | SHAP Explainability    |
+               +------------------------------+------------------------------+
+                                              |
+                                              v
+               +-------------------------------------------------------------+
+               |                         OUTPUT LAYER                        |
+               | Assessment | Prioritized Guidance | Nearest Sri Lanka Units |
+               +-------------------------------------------------------------+
 ```
 
 ---
 
-# Technology Stack
-
-## Mobile Application
-
-- React Native
-- Expo
-- TypeScript
-- Axios
-- React Navigation
-- React Native Maps
-
-## Backend
-
-- FastAPI
-- Python
-- SQLAlchemy
-- Pydantic
-
-## Database
-
-- PostgreSQL
-- PostGIS (Planned)
-
-## Machine Learning
-
-- Scikit-Learn
-- XGBoost
-- LightGBM
-- PyTorch
-- Transformers (BERT)
-
-## Data Processing
-
-- Pandas
-- NumPy
-- NLTK
-- SpaCy
-
-## Visualization
-
-- Leaflet
-- OpenStreetMap
-- Recharts
-
-## Version Control
-
-- Git
-- GitHub
-
----
-
-# Repository Structure
+## 3. Directory Structure
 
 ```text
-J26-IT-342
-
-├── frontend/
-│   └── venture_mobileApp/
-│
-├── backend/
-│
 ├── ML_models/
-│   ├── component_1/
-│   ├── component_2/
-│   ├── component_3/
-│   ├── component_4/
-│   └── shared/
-│
-├── datasets/
-│   ├── raw/
-│   ├── processed/
-│   └── final/
-│
-├── database/
-│   ├── schema/
-│   ├── seed_data/
-│   └── backups/
-│
-├── deployment/
-│
-├── docs/
-│
-├── tests/
-│
-└── README.md
+│   └── component04/
+│       ├── data/                   # Synthetic emergency incidents & KG triples
+│       ├── models/                 # Serialized model pipelines (.joblib)
+│       ├── reports/                # Classification & ablation JSON reports
+│       ├── train_models.py         # Advanced ML training & ablation pipeline
+│       ├── kg_reasoning.py         # NetworkX ontology reasoning engine
+│       ├── nlp_extract.py          # Incident text extraction module
+│       └── api.py                  # Component 4 API bridge
+├── backend/
+│   ├── api/
+│   │   └── emergency.py            # Component 4 REST API router
+│   ├── services/
+│   │   ├── emergency_service.py    # Main multimodal orchestrator
+│   │   ├── geo_service.py          # Haversine nearest resources locator
+│   │   └── explainability_service.py # SHAP interpretability service
+│   ├── schemas/
+│   │   └── emergency.py            # Pydantic request & response models
+│   └── main.py                     # Unified FastAPI application entrypoint
+├── frontend/
+│   └── venture_mobileapp/          # Flutter mobile application
+│       └── lib/
+│           ├── models/             # Typed Dart emergency models
+│           ├── services/           # Dio HTTP API client with offline fallback
+│           └── screens/component04/ # 8 complete UI screens
+└── tests/
+    └── test_emergency_pipeline.py  # Automated unit and integration test suite
 ```
 
 ---
 
-# Database Design
+## 4. Setup & Installation
 
-## Core Tables
-
-```text
-users
-
-weather_data
-
-social_data
-
-hazard_history
-
-processed_weather
-
-processed_social
-
-reliability_scores
-
-fusion_results
-
-prediction_results
-
-recommendations
-
-alerts
-```
-
----
-
-# API Modules
-
-## Weather API
-
-```http
-GET /weather
-```
-
-## Social Analysis API
-
-```http
-POST /analyze-social
-```
-
-## Reliability API
-
-```http
-POST /reliability
-```
-
-## Forecast API
-
-```http
-POST /predict
-```
-
-## Recommendation API
-
-```http
-GET /recommendation
-```
-
-## Dashboard API
-
-```http
-GET /dashboard
-```
-
----
-
-# Development Workflow
-
-## Branching Strategy
-
-### Main
-
-```text
-main
-```
-
-Stable codebase.
-
-### Development
-
-```text
-develop
-```
-
-System integration.
-
-### Component Branches
-
-```text
-feature/component-1
-feature/component-2
-feature/component-3
-feature/component-4
-```
-
-Individual development branches.
-
----
-
-# Setup Instructions
-
-## Clone Repository
-
+### Python Backend & ML Environment
 ```bash
-git clone <repository-url>
+# Activate existing virtual environment (Windows)
+.venv\Scripts\activate
+
+# Install required dependencies
+pip install -r backend/requirements.txt
+pip install xgboost shap networkx pytest httpx
 ```
 
+### Running Model Training, Evaluation & Ablation Study
 ```bash
-cd J26-IT-342
+python ML_models/component04/train_models.py
 ```
+This script:
+- Compares **Random Forest** vs. **XGBoost** for emergency classification and severity estimation.
+- Executes **5-Fold Stratified Cross-Validation**.
+- Executes the **Ablation Study** (Variants A, B, C, D) defined in Section 3.7.3.
+- Computes global **SHAP TreeExplainer feature importance** values.
+- Exports evaluation reports to `ML_models/component04/reports/`.
 
 ---
 
-## Backend Setup
+## 5. Running the API
 
+Start the FastAPI application:
 ```bash
-cd backend
-
-python -m venv venv
-
-venv\Scripts\activate
-
-pip install -r requirements.txt
-
-uvicorn main:app --reload
+uvicorn backend.main:app --reload --port 8000
 ```
+Interactive Swagger API documentation will be available at:
+`http://127.0.0.1:8000/docs`
 
-Swagger Documentation:
-
-```text
-http://127.0.0.1:8000/docs
-```
+### Key Endpoints:
+- `POST /api/v1/emergency/analyze`: Full multimodal emergency decision analysis (NLP + ML + KG + SHAP + Geo).
+- `POST /api/v1/emergency/extract-text`: Unstructured text entity extraction.
+- `GET /api/v1/emergency/resources`: Nearest Sri Lankan emergency facilities via GPS coordinates.
+- `GET /api/v1/emergency/benchmarks`: Model comparisons and ablation study metrics.
+- `GET /api/v1/emergency/shap-importance`: Global SHAP feature importance attribution.
 
 ---
 
-## Mobile Setup
+## 6. Running Automated Tests
 
+Run the complete test suite:
 ```bash
-cd frontend/venture_mobileApp
-
-npm install
-
-npx expo start
+pytest tests/test_emergency_pipeline.py -v
 ```
+All 16 test cases cover NLP extraction, Knowledge Graph reasoning, Haversine geospatial calculations, SHAP factor attribution, and FastAPI endpoints.
 
 ---
 
-# Current Development Status
+## 7. Running the Mobile Application (Flutter)
 
-## Completed
-
-- Repository Initialization
-- React Native Setup
-- FastAPI Setup
-- Development Environment Configuration
-- GitHub Integration
-
-## Ongoing
-
-- Dataset Collection
-- PostgreSQL Integration
-- API Development
-- Model Development
-- Mobile Interface Development
-- Component Integration
-
----
-
-# Expected Outcomes
-
-The final system will provide:
-
-- Environmental hazard forecasting
-- Social hazard intelligence
-- Reliability-aware risk predictions
-- Adaptive multi-source information fusion
-- Personalized recommendations
-- Interactive mobile visualizations
-- Real-time situational awareness
-
----
-
-# Academic Context
-
-This project is developed as part of the IT342 Research and Development Project and follows the proposed architecture, objectives, and deliverables specified within the approved research proposal and Technical Assessment Form (TAF).
-
----
-
-# License
-
-This repository is intended solely for academic and research purposes.
+Navigate to the mobile app directory:
+```bash
+cd frontend/venture_mobileapp
+flutter run
+```
+The app communicates with the FastAPI backend at `http://10.0.2.2:8000` (Android emulator) or `http://127.0.0.1:8000` (web/desktop), with automatic offline fallback so demo presentations run seamlessly.

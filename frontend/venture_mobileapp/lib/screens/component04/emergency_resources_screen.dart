@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import '../../models/emergency_models.dart';
 import 'recommendation_explanation_screen.dart';
 
 class EmergencyResourcesScreen extends StatelessWidget {
-  const EmergencyResourcesScreen({super.key});
+  final FullEmergencyResponseModel response;
+
+  const EmergencyResourcesScreen({super.key, required this.response});
 
   @override
   Widget build(BuildContext context) {
+    final resources = response.nearestResources;
+
     return Scaffold(
       appBar: AppBar(title: const Text('Emergency Resources')),
       body: SingleChildScrollView(
@@ -13,35 +18,57 @@ class EmergencyResourcesScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Map Placeholder
+            // Active Location Banner
             Container(
-              height: 140,
-              width: double.infinity,
+              padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: const Color(0xFF1E293B),
                 borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: Colors.grey.shade400),
               ),
-              child: const Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.map, size: 40, color: Colors.grey),
-                    SizedBox(height: 4),
-                    Text('GPS Map Placeholder (Nearby Assistance Units)', style: TextStyle(color: Colors.grey)),
-                  ],
-                ),
+              child: Row(
+                children: [
+                  const Icon(Icons.location_on, color: Color(0xFF10B981)),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Current GPS Fix (Sri Lanka Grid)',
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                        ),
+                        Text(
+                          '${response.contextSummary.coordinates} • ${response.contextSummary.trailName?.replaceAll('_', ' ') ?? 'Central Province'}',
+                          style: const TextStyle(color: Colors.white70, fontSize: 11),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(height: 16),
+
             const Text('Nearby Assistance & Rescue Teams', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 10),
-            
-            const _ResourceTile(name: 'Nuwara Eliya Base Hospital', type: 'Hospital', distance: '4.2 km', time: '18 mins', phone: '+94 52 222 2233'),
-            const _ResourceTile(name: 'Horton Plains Ranger Station', type: 'Ranger Post', distance: '1.5 km', time: '6 mins', phone: '+94 52 223 4411'),
-            const _ResourceTile(name: 'Mountain Rescue Team Alpha', type: 'Rescue Unit', distance: '3.0 km', time: '12 mins', phone: '+94 77 123 4567'),
-            const _ResourceTile(name: 'Police Station Ohiya', type: 'Police', distance: '6.8 km', time: '25 mins', phone: '+94 52 333 1122'),
-            
+            const SizedBox(height: 4),
+            const Text(
+              'Ranked by Haversine distance with mountain terrain dispatch estimates.',
+              style: TextStyle(color: Colors.grey, fontSize: 12),
+            ),
+            const SizedBox(height: 12),
+
+            if (resources.isEmpty)
+              const Text('No verified resources within 50km radius.')
+            else
+              ...resources.map((res) => _ResourceTile(
+                name: res.name,
+                type: res.type,
+                distance: res.distanceStr,
+                time: res.estimatedTimeStr,
+                phone: res.phone,
+                services: res.services.join(', '),
+              )),
+
             const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
@@ -55,10 +82,12 @@ class EmergencyResourcesScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const RecommendationExplanationScreen()),
+                    MaterialPageRoute(
+                      builder: (context) => RecommendationExplanationScreen(response: response),
+                    ),
                   );
                 },
-                child: const Text('View Recommendation Explanation', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                child: const Text('View Explainable AI (XAI) Insights', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               ),
             ),
           ],
@@ -74,8 +103,16 @@ class _ResourceTile extends StatelessWidget {
   final String distance;
   final String time;
   final String phone;
+  final String services;
 
-  const _ResourceTile({required this.name, required this.type, required this.distance, required this.time, required this.phone});
+  const _ResourceTile({
+    required this.name,
+    required this.type,
+    required this.distance,
+    required this.time,
+    required this.phone,
+    required this.services,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -94,15 +131,27 @@ class _ResourceTile extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-                const SizedBox(height: 2),
-                Text('$type • $distance away • Est. $time', style: const TextStyle(color: Colors.grey, fontSize: 12)),
+                Text(name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF1E293B))),
+                const SizedBox(height: 3),
+                Text('$type • $distance away • Est. $time', style: const TextStyle(color: Colors.grey, fontSize: 11)),
+                if (services.isNotEmpty) ...[
+                  const SizedBox(height: 3),
+                  Text('Capabilities: $services', style: TextStyle(color: Colors.grey.shade600, fontSize: 10, fontStyle: FontStyle.italic)),
+                ],
               ],
             ),
           ),
           IconButton(
             icon: const Icon(Icons.phone, color: Color(0xFF10B981)),
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Dialing $name ($phone)...'),
+                  backgroundColor: const Color(0xFF10B981),
+                  duration: const Duration(seconds: 2),
+                ),
+              );
+            },
           ),
         ],
       ),

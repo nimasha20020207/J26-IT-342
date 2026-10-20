@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import '../../models/emergency_models.dart';
 import 'emergency_resources_screen.dart';
 
 class RecommendedResponseScreen extends StatelessWidget {
-  const RecommendedResponseScreen({super.key});
+  final FullEmergencyResponseModel response;
+
+  const RecommendedResponseScreen({super.key, required this.response});
 
   @override
   Widget build(BuildContext context) {
+    final actions = response.recommendedActions;
+
     return Scaffold(
       appBar: AppBar(title: const Text('Recommended Response')),
       body: SingleChildScrollView(
@@ -13,32 +18,32 @@ class RecommendedResponseScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('AI & Knowledge Graph Recommendations', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 12),
-            const _RecommendationCard(
-              title: '1. Seek Medical Assistance & Splint Limb',
-              priority: 'Priority: High (1)',
-              urgency: 'Urgency: Immediate Action',
-              effectiveness: 'Expected Effectiveness: 96%',
-              isPrimary: true,
+            const Text(
+              'AI & Knowledge Graph Recommendations',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 10),
-            const _RecommendationCard(
-              title: '2. Contact Rescue Services / Park Ranger',
-              priority: 'Priority: High (2)',
-              urgency: 'Urgency: Within 15 Mins',
-              effectiveness: 'Expected Effectiveness: 91%',
-              isPrimary: false,
+            const SizedBox(height: 4),
+            const Text(
+              'Contextually prioritized guidance derived from environmental conditions and ontology.',
+              style: TextStyle(color: Colors.grey, fontSize: 13),
             ),
-            const SizedBox(height: 10),
-            const _RecommendationCard(
-              title: '3. Move to Safe Sheltered Area Nearby',
-              priority: 'Priority: Medium (3)',
-              urgency: 'Urgency: If Able',
-              effectiveness: 'Expected Effectiveness: 78%',
-              isPrimary: false,
-            ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 16),
+
+            if (actions.isEmpty)
+              const Center(child: Text('No recommendations available.'))
+            else
+              ...actions.map((act) => Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: _RecommendationCard(
+                  title: act.title,
+                  priority: act.priority,
+                  urgency: act.urgency,
+                  effectiveness: 'Effectiveness: ${act.effectivenessPct}%',
+                  isPrimary: act.isPrimary,
+                ),
+              )),
+
+            const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
               height: 50,
@@ -51,10 +56,12 @@ class RecommendedResponseScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const EmergencyResourcesScreen()),
+                    MaterialPageRoute(
+                      builder: (context) => EmergencyResourcesScreen(response: response),
+                    ),
                   );
                 },
-                child: const Text('View Nearby Resources', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                child: const Text('View Nearby Emergency Resources', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               ),
             ),
           ],
@@ -86,7 +93,10 @@ class _RecommendationCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: isPrimary ? const Color(0xFF10B981) : Colors.grey.shade300, width: isPrimary ? 2 : 1),
+        border: Border.all(
+          color: isPrimary ? const Color(0xFF10B981) : Colors.grey.shade300,
+          width: isPrimary ? 2 : 1,
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,12 +104,18 @@ class _RecommendationCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(priority, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Color(0xFF10B981))),
-              Text(effectiveness, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey)),
+              Text(
+                priority,
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Color(0xFF10B981)),
+              ),
+              Text(
+                effectiveness,
+                style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.grey),
+              ),
             ],
           ),
           const SizedBox(height: 6),
-          Text(title, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+          Text(title, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1E293B))),
           const SizedBox(height: 6),
           Text(urgency, style: const TextStyle(color: Colors.red, fontSize: 12, fontWeight: FontWeight.w500)),
         ],

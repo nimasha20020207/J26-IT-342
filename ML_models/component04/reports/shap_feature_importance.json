@@ -1,0 +1,19 @@
+{
+  "phone_battery_pct": 0.014990263931565318,
+  "temperature_c": 0.01045729776389406,
+  "visibility_pct": 0.010442811296451441,
+  "wind_speed_kmh": 0.010303239801380615,
+  "distance_from_trailhead_km": 0.009703787102364829,
+  "water_remaining_l": 0.009174984556390842,
+  "fatigue_score_1_10": 0.008874046915494559,
+  "rainfall_mm": 0.008012919951459075,
+  "hours_hiking": 0.007381129802688284,
+  "elevation_m": 0.005167762088422615,
+  "slope_degrees": 0.0049088539930274904,
+  "terrain_type_steep": 0.0034831285063263097,
+  "remote_area": 0.0031751020597055426,
+  "terrain_type_rocky": 0.002486042254711795,
+  "terrain_type_forest": 0.001751776804432553,
+  "terrain_type_ridge": 0.0013469070276556797,
+  "terrain_type_grassland": 0.0012594723897056859
+}

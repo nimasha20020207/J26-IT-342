@@ -1,0 +1,37 @@
+{
+  "Variant_A_ML_Only": {
+    "description": "ML trained only on basic hiker status features without terrain/weather context",
+    "emergency_classification_acc": 0.15,
+    "f1_weighted": 0.1453612861636575,
+    "top1_action_accuracy": 0.05416666666666667,
+    "has_knowledge_graph": false,
+    "has_explainability": false
+  },
+  "Variant_B_ML_Context": {
+    "description": "ML trained on hiker status + weather + terrain contextual features",
+    "emergency_classification_acc": 0.11666666666666667,
+    "f1_weighted": 0.11258660277528204,
+    "top1_action_accuracy": 0.06833333333333333,
+    "has_knowledge_graph": false,
+    "has_explainability": false
+  },
+  "Variant_C_ML_Context_KG": {
+    "description": "ML + Context + Domain Knowledge Graph multi-hop reasoning",
+    "emergency_classification_acc": 0.11666666666666667,
+    "f1_weighted": 0.11258660277528204,
+    "top1_action_accuracy": 0.08333333333333333,
+    "top3_action_accuracy": 0.21666666666666667,
+    "has_knowledge_graph": true,
+    "has_explainability": false
+  },
+  "Variant_D_Proposed": {
+    "description": "Full Hybrid Framework: ML + Context + Knowledge Graph + SHAP Explainability",
+    "emergency_classification_acc": 0.11666666666666667,
+    "f1_weighted": 0.11258660277528204,
+    "top1_action_accuracy": 0.08333333333333333,
+    "top3_action_accuracy": 0.21666666666666667,
+    "has_knowledge_graph": true,
+    "has_explainability": true,
+    "explainability_consistency": 0.96
+  }
+}

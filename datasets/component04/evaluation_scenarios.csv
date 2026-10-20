@@ -1,0 +1,9 @@
+scenario_id,incident_text,emergency_type,severity_level,rainfall_mm,visibility_pct,terrain_type,remote_area,expected_action
+SC001,A hiker fell and cannot bear weight on an ankle on a remote rocky trail.,injury,4,8,60,rocky,1,request_rescue_assistance
+SC002,We are lost in heavy rain and visibility is poor; phone battery is low.,lost_hiker,4,38,18,forest,1,share_gps_location
+SC003,Fresh landslide debris blocks the path after heavy rainfall.,landslide,5,45,30,steep,1,avoid_crossing_debris
+SC004,Fast water has flooded the trail crossing.,flooding,5,52,35,river,0,do_not_cross_fast_water
+SC005,A hiker is dizzy and exhausted in hot weather with little water.,dehydration_fatigue,3,0,90,steep,0,stop_in_safe_shade
+SC006,A wild animal is near the path; the hikers have kept their distance.,wildlife_encounter,2,3,80,forest,0,keep_distance_and_do_not_approach
+SC007,Thunderstorm approaching an exposed ridge with strong winds.,severe_weather,4,24,22,ridge,1,leave_exposed_area_if_safe
+SC008,A damaged bridge blocks the known trail and crossing is unsafe.,trail_blockage,3,12,70,forest,0,do_not_cross_unsafe_obstacle
