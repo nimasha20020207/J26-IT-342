@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 
 import '../../services/api_service.dart';
+import '../../theme/app_theme.dart';
 import 'dashboard.dart';
 
 class Screen2Processing extends StatefulWidget {
@@ -20,7 +21,8 @@ class Screen2Processing extends StatefulWidget {
   State<Screen2Processing> createState() => _Screen2ProcessingState();
 }
 
-class _Screen2ProcessingState extends State<Screen2Processing> with SingleTickerProviderStateMixin {
+class _Screen2ProcessingState extends State<Screen2Processing>
+    with SingleTickerProviderStateMixin {
   final _apiService = ApiService();
   String? _errorMessage;
   bool _isLoading = true;
@@ -46,14 +48,17 @@ class _Screen2ProcessingState extends State<Screen2Processing> with SingleTicker
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Screen3Dashboard(forecast: forecast)),
+        MaterialPageRoute(
+          builder: (context) => Screen3Dashboard(forecast: forecast),
+        ),
       );
     } on DioException catch (error) {
       if (!mounted) return;
       setState(() {
         _isLoading = false;
         _errorMessage = error.response?.data is Map<String, dynamic>
-            ? (error.response!.data as Map<String, dynamic>)['detail']?.toString()
+            ? (error.response!.data as Map<String, dynamic>)['detail']
+                  ?.toString()
             : 'Could not reach the backend at ${ApiService.baseUrl}. Start the API and try again.';
       });
     } on FormatException catch (error) {
@@ -68,18 +73,34 @@ class _Screen2ProcessingState extends State<Screen2Processing> with SingleTicker
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0B5563),
+      backgroundColor: AppColors.canvas,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.psychology, size: 64, color: Color(0xFF1BB98D)),
+              Container(
+                width: 96,
+                height: 96,
+                decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(32),
+                ),
+                child: const Icon(
+                  Icons.psychology_rounded,
+                  size: 48,
+                  color: AppColors.accent,
+                ),
+              ),
               const SizedBox(height: 24),
               const Text(
                 'Analyzing Trail Hazards',
-                style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: AppColors.text,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 8),
               Text(
@@ -87,13 +108,13 @@ class _Screen2ProcessingState extends State<Screen2Processing> with SingleTicker
                     ? 'Requesting a forecast for ${widget.trailName}'
                     : 'The forecast could not be loaded.',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white70, fontSize: 14),
+                style: TextStyle(color: AppColors.muted, fontSize: 14),
               ),
               const SizedBox(height: 48),
               LinearProgressIndicator(
                 value: _isLoading ? null : 0,
-                backgroundColor: Colors.white24,
-                color: const Color(0xFF1BB98D),
+                backgroundColor: AppColors.border,
+                color: AppColors.primary,
                 minHeight: 8,
                 borderRadius: BorderRadius.circular(4),
               ),
@@ -102,7 +123,7 @@ class _Screen2ProcessingState extends State<Screen2Processing> with SingleTicker
                 Text(
                   _errorMessage!,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 13),
+                  style: const TextStyle(color: AppColors.danger, fontSize: 13),
                 ),
                 const SizedBox(height: 16),
                 Row(
@@ -123,33 +144,41 @@ class _Screen2ProcessingState extends State<Screen2Processing> with SingleTicker
                 ),
               ],
               if (_isLoading)
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.05),
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.white12),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: AppColors.border),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
                           const SizedBox(
-                          width: 16, height: 16,
-                          child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF1BB98D)),
-                        ),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Text(
-                            'Waiting for the backend forecast response...',
-                            style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w500),
+                            width: 16,
+                            height: 16,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: AppColors.primary,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Text(
+                              'Waiting for the backend forecast response...',
+                              style: const TextStyle(
+                                color: AppColors.text,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
             ],
           ),
         ),

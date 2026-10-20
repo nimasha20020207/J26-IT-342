@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../models/component02/hazard_data.dart';
+import '../../theme/app_theme.dart';
+import '../../widgets/forecast_page_scaffold.dart';
 import 'heatmap.dart';
 
 class Screen3Dashboard extends StatelessWidget {
@@ -9,18 +11,21 @@ class Screen3Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF0B5563),
-        foregroundColor: Colors.white,
-        title: const Text('Hazard Forecast Dashboard', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.map),
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Screen4Heatmap(forecast: forecast))),
+    return ForecastPageScaffold(
+      title: 'Trail overview',
+      forecast: forecast,
+      selectedDestination: 0,
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.map),
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Screen4Heatmap(forecast: forecast),
+            ),
           ),
-        ],
-      ),
+        ),
+      ],
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -28,8 +33,10 @@ class Screen3Dashboard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              gradient: const LinearGradient(colors: [Color(0xFF0B5563), Color(0xFF137B8C)]),
-              borderRadius: BorderRadius.circular(16),
+              gradient: const LinearGradient(
+                colors: [AppColors.primaryDark, AppColors.primary],
+              ),
+              borderRadius: BorderRadius.circular(24),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,22 +44,42 @@ class Screen3Dashboard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Overall Risk Score', style: TextStyle(color: Colors.white70, fontSize: 13)),
+                    Text(
+                      'Overall Risk Score',
+                      style: TextStyle(color: Colors.white70, fontSize: 13),
+                    ),
                     SizedBox(height: 4),
-                    Text('${forecast.overallRiskScore} / 100', style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold)),
+                    Text(
+                      '${forecast.overallRiskScore} / 100',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     SizedBox(height: 4),
-                    Text('Backend ${forecast.mode} forecast', style: TextStyle(color: Colors.white60, fontSize: 11)),
+                    Text(
+                      'Backend ${forecast.mode} forecast',
+                      style: TextStyle(color: Colors.white60, fontSize: 11),
+                    ),
                   ],
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 14,
+                    vertical: 8,
+                  ),
                   decoration: BoxDecoration(
                     color: const Color(0xFFF59E0B),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
                     '${forecast.riskLevel} Risk',
-                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
                   ),
                 ),
               ],
@@ -70,7 +97,10 @@ class Screen3Dashboard extends StatelessWidget {
               children: [
                 Text(
                   'Weather · ${forecast.weather.source} · ${forecast.weather.forecastDate.toIso8601String().split('T').first}',
-                  style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF0B5563)),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.primary,
+                  ),
                 ),
                 const SizedBox(height: 8),
                 Text(
@@ -86,84 +116,125 @@ class Screen3Dashboard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          const Text('Identified Hazard Probabilities', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF0B5563))),
+          const Text(
+            'Identified hazard probabilities',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: AppColors.text,
+            ),
+          ),
           const SizedBox(height: 12),
           // Hazards List
-          ...forecast.hazards.map((h) => Container(
-                margin: const EdgeInsets.only(bottom: 12),
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
-                  boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 2))],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(h.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF0B5563))),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                          decoration: BoxDecoration(
+          ...forecast.hazards.map(
+            (h) => Container(
+              margin: const EdgeInsets.only(bottom: 12),
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.04),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        h.name,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: AppColors.text,
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 2,
+                        ),
+                        decoration: BoxDecoration(
+                          color: h.severity == 'High'
+                              ? const Color(0xFFEF4444).withOpacity(0.1)
+                              : h.severity == 'Medium'
+                              ? const Color(0xFFF59E0B).withOpacity(0.1)
+                              : AppColors.primary.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Text(
+                          h.severity,
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
                             color: h.severity == 'High'
-                                ? const Color(0xFFEF4444).withOpacity(0.1)
+                                ? const Color(0xFFEF4444)
                                 : h.severity == 'Medium'
-                                    ? const Color(0xFFF59E0B).withOpacity(0.1)
-                                    : const Color(0xFF1BB98D).withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Text(
-                            h.severity,
-                            style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.bold,
-                              color: h.severity == 'High'
-                                  ? const Color(0xFFEF4444)
-                                  : h.severity == 'Medium'
-                                      ? const Color(0xFFF59E0B)
-                                      : const Color(0xFF1BB98D),
-                            ),
+                                ? const Color(0xFFF59E0B)
+                                : AppColors.primary,
                           ),
                         ),
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(4),
-                            child: LinearProgressIndicator(
-                              value: h.probability,
-                              minHeight: 8,
-                              backgroundColor: Colors.grey.shade200,
-                              color: h.probability > 0.7
-                                  ? const Color(0xFFEF4444)
-                                  : h.probability > 0.4
-                                      ? const Color(0xFFF59E0B)
-                                      : const Color(0xFF1BB98D),
-                            ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: LinearProgressIndicator(
+                            value: h.probability,
+                            minHeight: 8,
+                            backgroundColor: Colors.grey.shade200,
+                            color: h.probability > 0.7
+                                ? const Color(0xFFEF4444)
+                                : h.probability > 0.4
+                                ? const Color(0xFFF59E0B)
+                                : AppColors.primary,
                           ),
                         ),
-                        const SizedBox(width: 12),
-                        Text('${(h.probability * 100).toInt()}%', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                      ],
-                    ),
-                  ],
-                ),
-              )),
+                      ),
+                      const SizedBox(width: 12),
+                      Text(
+                        '${(h.probability * 100).toInt()}%',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
           const SizedBox(height: 12),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF0B5563),
+              backgroundColor: AppColors.primary,
               foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(vertical: 14),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
             ),
-            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Screen4Heatmap(forecast: forecast))),
-            child: const Text('View Environmental Risk Heatmap', style: TextStyle(fontWeight: FontWeight.bold)),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Screen4Heatmap(forecast: forecast),
+              ),
+            ),
+            child: const Text(
+              'View Environmental Risk Heatmap',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),

@@ -4,6 +4,7 @@ import 'package:latlong2/latlong.dart';
 
 import '../../models/component02/hazard_data.dart';
 import '../../services/api_service.dart';
+import '../../widgets/forecast_page_scaffold.dart';
 import 'temporal_trends.dart';
 
 class Screen4Heatmap extends StatefulWidget {
@@ -57,7 +58,9 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
         _isLoading = false;
         // Select active forecast trail if found
         _selectedZone = zones.firstWhere(
-          (z) => z.trailName.toLowerCase() == widget.forecast.trailName.toLowerCase(),
+          (z) =>
+              z.trailName.toLowerCase() ==
+              widget.forecast.trailName.toLowerCase(),
           orElse: () => zones.isNotEmpty ? zones.first : _fallbackActiveZone(),
         );
       });
@@ -72,13 +75,19 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
   }
 
   HeatZoneItem _fallbackActiveZone() {
-    final coords = _trailCoords[widget.forecast.trailName] ?? const LatLng(7.8731, 80.7718);
+    final coords =
+        _trailCoords[widget.forecast.trailName] ??
+        const LatLng(7.8731, 80.7718);
     return HeatZoneItem(
       trailName: widget.forecast.trailName,
       latitude: coords.latitude,
       longitude: coords.longitude,
-      predictedHazard: widget.forecast.hazards.isNotEmpty ? widget.forecast.hazards.first.name : 'Environmental Hazard',
-      hazardProbability: widget.forecast.hazards.isNotEmpty ? widget.forecast.hazards.first.probability : 0.60,
+      predictedHazard: widget.forecast.hazards.isNotEmpty
+          ? widget.forecast.hazards.first.name
+          : 'Environmental Hazard',
+      hazardProbability: widget.forecast.hazards.isNotEmpty
+          ? widget.forecast.hazards.first.probability
+          : 0.60,
       predictedRiskScore: widget.forecast.overallRiskScore.toDouble(),
       riskLevel: widget.forecast.riskLevel,
       rainfall24hMm: widget.forecast.weather.precipitationMm,
@@ -89,14 +98,19 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
 
   List<HeatZoneItem> _generateFallbackHeatZones() {
     return _trailCoords.entries.map((e) {
-      final isCurrent = e.key.toLowerCase() == widget.forecast.trailName.toLowerCase();
-      final score = isCurrent ? widget.forecast.overallRiskScore.toDouble() : 25.0;
+      final isCurrent =
+          e.key.toLowerCase() == widget.forecast.trailName.toLowerCase();
+      final score = isCurrent
+          ? widget.forecast.overallRiskScore.toDouble()
+          : 25.0;
       final level = score >= 50 ? 'High' : (score >= 25 ? 'Medium' : 'Low');
       return HeatZoneItem(
         trailName: e.key,
         latitude: e.value.latitude,
         longitude: e.value.longitude,
-        predictedHazard: isCurrent ? (widget.forecast.hazards.firstOrNull?.name ?? 'Slippery trail') : 'Normal condition',
+        predictedHazard: isCurrent
+            ? (widget.forecast.hazards.firstOrNull?.name ?? 'Slippery trail')
+            : 'Normal condition',
         hazardProbability: 0.5,
         predictedRiskScore: score,
         riskLevel: level,
@@ -121,23 +135,23 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
 
   @override
   Widget build(BuildContext context) {
-    final activeCoords = _trailCoords[widget.forecast.trailName] ?? const LatLng(7.8731, 80.7718);
+    final activeCoords =
+        _trailCoords[widget.forecast.trailName] ??
+        const LatLng(7.8731, 80.7718);
 
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF0B5563),
-        foregroundColor: Colors.white,
-        title: const Text('Environmental Risk Heatmap', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            onPressed: () {
-              setState(() => _isLoading = true);
-              _loadHeatZones();
-            },
-          ),
-        ],
-      ),
+    return ForecastPageScaffold(
+      title: 'Risk map',
+      forecast: widget.forecast,
+      selectedDestination: 1,
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.refresh),
+          onPressed: () {
+            setState(() => _isLoading = true);
+            _loadHeatZones();
+          },
+        ),
+      ],
       body: Stack(
         children: [
           // Interactive OpenStreetMap Layer
@@ -157,7 +171,9 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
               MarkerLayer(
                 markers: _heatZones.map((zone) {
                   final color = _getRiskColor(zone.riskLevel);
-                  final isSelected = _selectedZone?.trailName.toLowerCase() == zone.trailName.toLowerCase();
+                  final isSelected =
+                      _selectedZone?.trailName.toLowerCase() ==
+                      zone.trailName.toLowerCase();
 
                   return Marker(
                     point: LatLng(zone.latitude, zone.longitude),
@@ -170,16 +186,28 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 4,
+                                  ),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(color: color, width: 2),
-                                    boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 6)],
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Colors.black26,
+                                        blurRadius: 6,
+                                      ),
+                                    ],
                                   ),
                                   child: Text(
                                     '${zone.trailName} (${zone.predictedRiskScore.toInt()})',
-                                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: color),
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold,
+                                      color: color,
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(height: 2),
@@ -198,8 +226,16 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
                                   decoration: BoxDecoration(
                                     color: color,
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.white, width: 2),
-                                    boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 4)],
+                                    border: Border.all(
+                                      color: Colors.white,
+                                      width: 2,
+                                    ),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Colors.black26,
+                                        blurRadius: 4,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -217,18 +253,33 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
               top: 16,
               left: 16,
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 6,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 4)],
+                  boxShadow: const [
+                    BoxShadow(color: Colors.black12, blurRadius: 4),
+                  ],
                 ),
                 child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF0B5563))),
+                    SizedBox(
+                      width: 14,
+                      height: 14,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        color: Color(0xFF0B5563),
+                      ),
+                    ),
                     SizedBox(width: 8),
-                    Text('Updating live heat zones...', style: TextStyle(fontSize: 11, color: Color(0xFF0B5563))),
+                    Text(
+                      'Updating live heat zones...',
+                      style: TextStyle(fontSize: 11, color: Color(0xFF0B5563)),
+                    ),
                   ],
                 ),
               ),
@@ -244,7 +295,13 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
-                boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 10, offset: Offset(0, 4))],
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 10,
+                    offset: Offset(0, 4),
+                  ),
+                ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -261,25 +318,39 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
                             children: [
                               Text(
                                 _selectedZone!.trailName,
-                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF0B5563)),
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  color: Color(0xFF0B5563),
+                                ),
                               ),
                               const SizedBox(height: 2),
                               Text(
                                 'Hazard: ${_selectedZone!.predictedHazard} · Risk ${_selectedZone!.predictedRiskScore.toInt()}/100',
-                                style: TextStyle(fontSize: 12, color: Colors.grey.shade700),
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey.shade700,
+                                ),
                               ),
                             ],
                           ),
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
                           decoration: BoxDecoration(
                             color: _getRiskColor(_selectedZone!.riskLevel),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
                             '${_selectedZone!.riskLevel} Risk',
-                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 11),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 11,
+                            ),
                           ),
                         ),
                       ],
@@ -288,13 +359,26 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
                   ],
 
                   // Legend
-                  const Text('Spatial Risk Legend', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF0B5563))),
+                  const Text(
+                    'Spatial Risk Legend',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                      color: Color(0xFF0B5563),
+                    ),
+                  ),
                   const SizedBox(height: 8),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _LegendItem(color: Color(0xFFEF4444), label: 'High-risk zone'),
-                      _LegendItem(color: Color(0xFFF59E0B), label: 'Medium-risk'),
+                      _LegendItem(
+                        color: Color(0xFFEF4444),
+                        label: 'High-risk zone',
+                      ),
+                      _LegendItem(
+                        color: Color(0xFFF59E0B),
+                        label: 'Medium-risk',
+                      ),
                       _LegendItem(color: Color(0xFF1BB98D), label: 'Safe area'),
                     ],
                   ),
@@ -307,14 +391,22 @@ class _Screen4HeatmapState extends State<Screen4Heatmap> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF1BB98D),
                         foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                         padding: const EdgeInsets.symmetric(vertical: 12),
                       ),
                       onPressed: () => Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Screen5TemporalTrends(forecast: widget.forecast)),
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Screen5TemporalTrends(forecast: widget.forecast),
+                        ),
                       ),
-                      child: const Text('View Temporal Risk Trends', style: TextStyle(fontWeight: FontWeight.bold)),
+                      child: const Text(
+                        'View Temporal Risk Trends',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ],
@@ -336,9 +428,19 @@ class _LegendItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(width: 12, height: 12, decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(3))),
+        Container(
+          width: 12,
+          height: 12,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(3),
+          ),
+        ),
         const SizedBox(width: 6),
-        Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
+        Text(
+          label,
+          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        ),
       ],
     );
   }
