@@ -132,4 +132,5 @@ if __name__ == "__main__":
     print("Derived Actions:", result["actions"])
     print("Reasoning Paths:")
     for path in result["reasoning_paths"]:
-        print("  *", path)
+        print("  *", path)            
+#
