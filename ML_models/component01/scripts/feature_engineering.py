@@ -3,11 +3,13 @@ import pandas as pd
 import numpy as np
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DATA_DIR = os.path.join(BASE_DIR, 'data', 'raw')
-PROCESSED_DATA_DIR = os.path.join(BASE_DIR, 'data', 'processed')
+PROJECT_ROOT = os.path.dirname(os.path.dirname(BASE_DIR))
+
+RAW_DATA_DIR = os.path.join(PROJECT_ROOT, 'datasets', 'component01', 'raw')
+PROCESSED_DATA_DIR = os.path.join(PROJECT_ROOT, 'datasets', 'component01', 'processed')
 
 # 1. Datasets දෙක Load කරගැනීම
-users_df = pd.read_csv(os.path.join(RAW_DATA_DIR, 'augmented_users_500.csv'))
+users_df = pd.read_csv(os.path.join(RAW_DATA_DIR, 'Hiking Trail Preference & Fitness Assessment Survey.csv'))
 trails_df = pd.read_csv(os.path.join(RAW_DATA_DIR, 'hiking_trails_sri_lanka.csv'))
 
 # 2. Categorical දත්ත අංක බවට හැරවීමේ Functions (Encoding)

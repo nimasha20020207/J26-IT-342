@@ -9,8 +9,11 @@ import matplotlib.pyplot as plt
 import joblib
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROCESSED_DATA_PATH = os.path.join(BASE_DIR, 'data', 'processed', 'engineered_user_trail_dataset.csv')
+PROJECT_ROOT = os.path.dirname(os.path.dirname(BASE_DIR))
+
+PROCESSED_DATA_PATH = os.path.join(PROJECT_ROOT, 'datasets', 'component01', 'processed', 'engineered_user_trail_dataset.csv')
 MODEL_PATH = os.path.join(BASE_DIR, 'models', 'xgboost_trail_model.pkl')
+
 PLOTS_DIR = os.path.join(BASE_DIR, 'outputs', 'plots')
 
 # 1. Engineered Dataset එක Load කරගැනීම
