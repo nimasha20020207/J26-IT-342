@@ -50,6 +50,8 @@ class WeatherSummary {
   final double windSpeedKmh;
   final double windGustKmh;
   final int humidity;
+  final bool isCached;
+  final DateTime? lastUpdatedAt;
 
   const WeatherSummary({
     required this.forecastDate,
@@ -62,7 +64,27 @@ class WeatherSummary {
     required this.windSpeedKmh,
     required this.windGustKmh,
     required this.humidity,
+    this.isCached = false,
+    this.lastUpdatedAt,
   });
+
+  WeatherSummary withCacheMetadata({
+    required bool isCached,
+    required DateTime lastUpdatedAt,
+  }) => WeatherSummary(
+    forecastDate: forecastDate,
+    source: source,
+    temperatureC: temperatureC,
+    feelsLikeC: feelsLikeC,
+    condition: condition,
+    rainChance: rainChance,
+    precipitationMm: precipitationMm,
+    windSpeedKmh: windSpeedKmh,
+    windGustKmh: windGustKmh,
+    humidity: humidity,
+    isCached: isCached,
+    lastUpdatedAt: lastUpdatedAt,
+  );
 
   factory WeatherSummary.fromJson(Map<String, dynamic> json) => WeatherSummary(
         forecastDate: DateTime.parse(json['forecast_date'] as String),
@@ -122,6 +144,8 @@ class ForecastData {
   final List<SocialReport> socialReports;
   final List<RiskTrend> hourlyTrends;
   final List<DailyPrediction> dailyPredictions;
+  final bool isCached;
+  final DateTime? lastUpdatedAt;
 
   const ForecastData({
     required this.requestId,
@@ -139,7 +163,32 @@ class ForecastData {
     required this.socialReports,
     required this.hourlyTrends,
     required this.dailyPredictions,
+    this.isCached = false,
+    this.lastUpdatedAt,
   });
+
+  ForecastData withCacheMetadata({
+    required bool isCached,
+    required DateTime lastUpdatedAt,
+  }) => ForecastData(
+    requestId: requestId,
+    mode: mode,
+    trailName: trailName,
+    startDate: startDate,
+    endDate: endDate,
+    overallRiskScore: overallRiskScore,
+    riskLevel: riskLevel,
+    hazards: hazards,
+    weather: weather,
+    recommendationAction: recommendationAction,
+    recommendationSummary: recommendationSummary,
+    precautions: precautions,
+    socialReports: socialReports,
+    hourlyTrends: hourlyTrends,
+    dailyPredictions: dailyPredictions,
+    isCached: isCached,
+    lastUpdatedAt: lastUpdatedAt,
+  );
 
   factory ForecastData.fromJson(Map<String, dynamic> json) {
     final recommendation = json['recommendation'] as Map<String, dynamic>;

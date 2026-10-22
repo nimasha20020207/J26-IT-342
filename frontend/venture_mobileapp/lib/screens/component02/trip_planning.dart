@@ -771,7 +771,7 @@ class _WeatherDetails extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
-                '${weather.source} forecast',
+                weather.isCached ? 'Saved copy' : '${weather.source} forecast',
                 style: const TextStyle(
                   color: AppColors.primary,
                   fontSize: 9,
@@ -781,6 +781,35 @@ class _WeatherDetails extends StatelessWidget {
             ),
           ],
         ),
+        if (weather.lastUpdatedAt != null) ...[
+          const SizedBox(height: 8),
+          Row(
+            children: [
+              Icon(
+                weather.isCached
+                    ? Icons.cloud_off_rounded
+                    : Icons.cloud_done_rounded,
+                size: 13,
+                color: weather.isCached ? AppColors.warning : AppColors.primary,
+              ),
+              const SizedBox(width: 5),
+              Expanded(
+                child: Text(
+                  weather.isCached
+                      ? 'Offline · saved ${_formatUpdatedAt(weather.lastUpdatedAt!)}'
+                      : 'Updated ${_formatUpdatedAt(weather.lastUpdatedAt!)}',
+                  style: TextStyle(
+                    color: weather.isCached
+                        ? AppColors.warning
+                        : AppColors.muted,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
         const Padding(
           padding: EdgeInsets.symmetric(vertical: 12),
           child: Divider(height: 1, color: AppColors.border),
@@ -813,6 +842,14 @@ class _WeatherDetails extends StatelessWidget {
       ],
     );
   }
+}
+
+String _formatUpdatedAt(DateTime value) {
+  final local = value.toLocal();
+  final hour = local.hour % 12 == 0 ? 12 : local.hour % 12;
+  final minute = local.minute.toString().padLeft(2, '0');
+  final period = local.hour < 12 ? 'AM' : 'PM';
+  return '${local.day}/${local.month}/${local.year} $hour:$minute $period';
 }
 
 String _formatDate(DateTime date) {

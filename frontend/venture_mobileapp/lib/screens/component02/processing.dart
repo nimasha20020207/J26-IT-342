@@ -59,7 +59,7 @@ class _Screen2ProcessingState extends State<Screen2Processing>
         _errorMessage = error.response?.data is Map<String, dynamic>
             ? (error.response!.data as Map<String, dynamic>)['detail']
                   ?.toString()
-            : 'Could not reach the backend at ${ApiService.baseUrl}. Start the API and try again.';
+            : 'Could not reach the backend at ${ApiService.baseUrl}. No saved forecast is available for this trail and date range. Connect and retry.';
       });
     } on FormatException catch (error) {
       if (!mounted) return;

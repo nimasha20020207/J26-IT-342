@@ -1,17 +1,19 @@
-# venture_mobileapp
+# Venture mobile app
 
-A new Flutter project.
+## Online and offline behaviour
 
-## Getting Started
+When connected, the app requests weather and forecasts from the backend and saves
+successful responses on the device. If a later request fails because of a
+connection problem or server error, it uses the saved response for the same
+trail and date selection. Weather and forecast screens identify saved responses
+as offline copies and show when they were last received. Treat saved information
+as potentially outdated; it is not a replacement for current official guidance.
 
-This project is a starting point for a Flutter application.
+The cache is specific to each trail/date (and forecast date range), so changing
+the selection while offline may not have a saved response. The interactive
+OpenStreetMap background still needs an internet connection; offline map-tile
+downloads are not implemented.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To demonstrate offline behaviour, first load a trail's weather and forecast
+while online, then disable the network and request the same trail and dates
+again. The app should show the saved values and an offline warning.
