@@ -7,16 +7,15 @@ import numpy as np
 import joblib
 import shap
 import json
-import sqlite3
 
-# Import our custom modules
+# පරණ sqlite3 import එක අයින් කළා. database.py එකෙන් get_db_connection ගත්තා.
 from schemas import UserRegistrationRequest, PeerFitnessSyncRequest, RecommendationRequest
-from database import init_db, get_registered_user, DB_FILE
+from database import init_db, get_registered_user, get_db_connection
 from nlp_scraper import fetch_live_social_data
 from utils import map_difficulty, extract_scenic_tags, build_route_geometry_from_csv
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # මේකෙන් එන්නේ backend\component01
-PROJECT_ROOT = os.path.dirname(os.path.dirname(BASE_DIR))  # මේකෙන් J26-IT-342 ප්‍රධාන ෆෝල්ඩර් එකට යනවා
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
+PROJECT_ROOT = os.path.dirname(os.path.dirname(BASE_DIR))  
 
 MODEL_PATH = os.path.join(PROJECT_ROOT, 'ML_models', 'component01', 'models', 'xgboost_trail_model.pkl')
 TRAILS_DATA_PATH = os.path.join(PROJECT_ROOT, 'datasets', 'component01', 'raw', 'hiking_trails_sri_lanka.csv')
@@ -88,27 +87,29 @@ def get_profile():
 @app.post("/profile")
 def save_or_update_profile(req: UserRegistrationRequest):
     init_db()
-    conn = sqlite3.connect(DB_FILE)
+    conn = get_db_connection()
     cursor = conn.cursor()
+    # PostgreSQL වල ? වෙනුවට %s භාවිතා වේ
     cursor.execute("""
         INSERT INTO user_profile (
             id, name, email, age, weight_kg, height_cm, resting_hr,
             experience_level, has_medical_issue, medical_notes,
             preferred_max_hours, preferred_scenic, fitness_level, fitness_source
-        ) VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ) VALUES (1, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         ON CONFLICT(id) DO UPDATE SET
-            name=excluded.name,
-            email=excluded.email,
-            age=excluded.age,
-            weight_kg=excluded.weight_kg,
-            height_cm=excluded.height_cm,
-            resting_hr=excluded.resting_hr,
-            experience_level=excluded.experience_level,
-            has_medical_issue=excluded.has_medical_issue,
-            medical_notes=excluded.medical_notes,
-            preferred_max_hours=excluded.preferred_max_hours,
-            preferred_scenic=excluded.preferred_scenic,
-            fitness_level=excluded.fitness_level
+            name=EXCLUDED.name,
+            email=EXCLUDED.email,
+            age=EXCLUDED.age,
+            weight_kg=EXCLUDED.weight_kg,
+            height_cm=EXCLUDED.height_cm,
+            resting_hr=EXCLUDED.resting_hr,
+            experience_level=EXCLUDED.experience_level,
+            has_medical_issue=EXCLUDED.has_medical_issue,
+            medical_notes=EXCLUDED.medical_notes,
+            preferred_max_hours=EXCLUDED.preferred_max_hours,
+            preferred_scenic=EXCLUDED.preferred_scenic,
+            fitness_level=EXCLUDED.fitness_level,
+            fitness_source=EXCLUDED.fitness_source
     """, (
         req.name, req.email, req.age, req.weight_kg, req.height_cm, req.resting_hr,
         req.experience_level, int(req.has_medical_issue), req.medical_notes,
@@ -116,15 +117,17 @@ def save_or_update_profile(req: UserRegistrationRequest):
         req.fitness_level, "Manual Selection / Smartwatch Baseline"
     ))
     conn.commit()
+    cursor.close()
     conn.close()
     return {"status": "saved", "profile": get_registered_user()}
 
 @app.delete("/profile")
 def reset_profile():
-    conn = sqlite3.connect(DB_FILE)
+    conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM user_profile")
+    cursor.execute("TRUNCATE TABLE user_profile RESTART IDENTITY CASCADE;")
     conn.commit()
+    cursor.close()
     conn.close()
     return {"status": "deleted", "registered": False}
 
@@ -133,14 +136,16 @@ def sync_fitness_from_peer_model(req: PeerFitnessSyncRequest):
     user = get_registered_user()
     if not user:
         raise HTTPException(status_code=400, detail="Please register a user profile first.")
-    conn = sqlite3.connect(DB_FILE)
+    
+    conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute("""
         UPDATE user_profile
-        SET fitness_level = ?, resting_hr = COALESCE(?, resting_hr), fitness_source = ?
+        SET fitness_level = %s, resting_hr = COALESCE(%s, resting_hr), fitness_source = %s
         WHERE id = 1
     """, (req.predicted_fitness_level, req.resting_hr, req.source_model))
     conn.commit()
+    cursor.close()
     conn.close()
     return {"status": "synced", "profile": get_registered_user()}
 
