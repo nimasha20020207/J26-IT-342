@@ -172,10 +172,11 @@ USER & ENVIRONMENT INPUTS
 - `trails`
 - `recommendations`
 
-## [To be updated by Component Owners]
-- `[Placeholder for Component 02 Tables]`
-- `[Placeholder for Component 03 Tables]`
-- `[Placeholder for Component 04 Tables]`
+## Component 02
+
+## Component 03
+
+## Component 04
 
 ---
 
@@ -186,10 +187,11 @@ USER & ENVIRONMENT INPUTS
 - `POST /recommend`
 - `POST /sync-fitness-model`
 
-## [To be updated by Component Owners]
-- `[Placeholder for Component 02 APIs]`
-- `[Placeholder for Component 03 APIs]`
-- `[Placeholder for Component 04 APIs]`
+## Component 02
+
+## Component 03
+
+## Component 04
 
 ---
 
