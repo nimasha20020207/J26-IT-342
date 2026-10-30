@@ -48,7 +48,6 @@ Develop a context-aware emergency detection and response recommendation system t
 - Train multi-output ML models (XGBoost) to predict suitability, enjoyment, and completion probability.
 - Generate explainable outputs using SHAP/LIME for recommendation justification.
 - Extract real-time social sentiment and hazard penalties using NLP (VADER) from Reddit and Google News feeds.
-- Implement server-side caching (`SOCIAL_CACHE`) and on-device offline storage (`shared_preferences`) for resilient access during hikes.
 
 ### Inputs
 - User & Profile Data (Demographics, Fitness level, Preferences, Historical ratings)
