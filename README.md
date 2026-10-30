@@ -176,49 +176,6 @@ USER & ENVIRONMENT INPUTS
 
 ---
 
-# Database Design
-
-## Component 01
-- `users`
-- `user_profile`
-- `trails`
-- `recommendations`
-
-## Component 02
-
-## Component 03
-- `hiking_sessions`
-- `wearable_sensor_readings`
-- `environmental_readings`
-- `physiological_risk_estimates`
-- `safety_recommendations`
-- `safety_notifications`
-
-## Component 04
-
----
-
-# API Modules
-
-## Component 01
-- `GET /profile`
-- `POST /recommend`
-- `POST /sync-fitness-model`
-
-## Component 02
-
-## Component 03
-- `GET /weather`
-- `GET /hiking-sessions`
-- `POST /hiking-sessions`
-- `POST /hiking-sessions/{session_id}/end`
-- `POST /ai/predict`
-- `GET /safety-recommendations`
-- `GET /hiking-sessions/{session_id}/summary`
-
-## Component 04
-
----
 
 # Repository Structure
 
