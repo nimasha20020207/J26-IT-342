@@ -30,7 +30,7 @@ Develop an explainable personalized hiking trail recommendation system using hyb
 Develop an environmental and social hazard forecasting system by fusing meteorological data with NLP-extracted social media and news signals.
 
 ### Objective 03 (Component 3)
-Develop a multimodal physiological and performance monitoring system using deep learning to predict fatigue, dehydration, and physical strain in real-time.
+Develop a multimodal physiological and performance monitoring system using deep learning to predict fatigue, Heat , and physical strain in real-time.
 
 ### Objective 04 (Component 4)
 Develop a context-aware emergency detection and response recommendation system to provide actionable evacuation strategies and rescue guidance.
@@ -81,19 +81,32 @@ Develop a context-aware emergency detection and response recommendation system t
 ---
 
 ## Component 03 – Multimodal Physiological and Performance Monitoring System
+
 **Developer:** Kariyawasam K.L.A.N. (IT23366718)
 
 ### Responsibilities
-- Acquire and preprocess multimodal wearable sensor datasets.
-- Develop deep learning models (LSTM/Transformer fusion) for time-series data.
-- Predict fatigue, dehydration, and physical strain levels.
-- Generate real-time safety alerts based on physiological thresholds.
+- Acquire and preprocess physiological data from the Samsung Galaxy Watch6 and environmental data from the mobile application.
+- Implement time-series feature extraction, sensor synchronization, and data normalization for AI inference.
+- Generate non-diagnostic estimates for fatigue, heat stress, and physical strain.
+- Provide actionable hiking safety recommendations using physiological and environmental context.
+- Implement safety alert handling with persistence checks and notification cooldown mechanisms.
+- Develop and test the Flutter-based live monitoring dashboard.
 
 ### Inputs
-- Physiological & Context Data (Heart rate, Accelerometer, GPS/Location, Temperature, Humidity)
+- **Wearable Data:** Heart rate, heart-rate trend, step cadence.
+- **GPS and Terrain Data:** Walking speed, pace change, slope percentage, elevation gain.
+- **Environmental Data:** Air temperature, relative humidity, calculated heat index.
+- **Session Data:** Time since hike start, time since last completed rest.
 
 ### Outputs
-- Physiological Health Insights (Fatigue level, Dehydration risk, Physical strain index, Safety alerts)
+- Fatigue estimate.
+- Heat stress estimate.
+- Physical strain estimate.
+- Context-aware hiking safety recommendations.
+- Safety alerts and notification support.
+- Live fitness monitoring and AI research dashboard.
+
+
 
 ---
 
@@ -149,7 +162,7 @@ USER & ENVIRONMENT INPUTS
 # Technology Stack
 
 ## Mobile Application
-- React Native
+- Flutter 
 
 ## Backend
 - FastAPI (Python)
@@ -158,7 +171,7 @@ USER & ENVIRONMENT INPUTS
 ## Machine Learning & AI
 - **Component 01:** XGBoost, Collaborative Filtering, SHAP/LIME, VADER NLP
 - **Component 02:** BERT, Topic Modeling, Scikit-Learn
-- **Component 03:** LSTM, Transformer Fusion Architectures
+- **Component 03:**  LSTM-Based Time-Series Risk Model, TensorFlow Lite (TFLite), Multimodal Sensor Feature Processing, On-Device AI Inference
 - **Component 04:** Multi-class Classification, Rule-based Reasoning
 
 ---
@@ -174,12 +187,12 @@ USER & ENVIRONMENT INPUTS
 ## Component 02
 
 ## Component 03
-- hiking_sessions
-- wearable_sensor_readings
-- environmental_readings
-- physiological_risk_estimates
-- safety_recommendations
-- safety_notifications
+- `hiking_sessions`
+- `wearable_sensor_readings`
+- `environmental_readings`
+- `physiological_risk_estimates`
+- `safety_recommendations`
+- `safety_notifications`
 
 ## Component 04
 
@@ -195,13 +208,13 @@ USER & ENVIRONMENT INPUTS
 ## Component 02
 
 ## Component 03
-- GET /weather
-- GET /hiking-sessions
-- POST /hiking-sessions
-- POST /hiking-sessions/{session_id}/end
-- POST /ai/predict
-- GET /safety-recommendations
-- GET /hiking-sessions/{session_id}/summary
+- `GET /weather`
+- `GET /hiking-sessions`
+- `POST /hiking-sessions`
+- `POST /hiking-sessions/{session_id}/end`
+- `POST /ai/predict`
+- `GET /safety-recommendations`
+- `GET /hiking-sessions/{session_id}/summary`
 
 ## Component 04
 
