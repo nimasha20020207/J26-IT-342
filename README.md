@@ -1,213 +1,148 @@
-# Venture: Adaptive Multi-Source Reliability-Aware Environmental Hazard Forecasting and Recommendation System
+# Venture: Explainable Multi-Modal AI for Risk-Aware Personalized Hiking in Sri Lanka
 
 ## Overview
 
-Venture is a mobile-based intelligent environmental hazard forecasting and decision-support platform developed as part of the IT342 Final Year Research Project.
+Venture is an integrated, explainable, multi-modal AI framework developed as part of the IT4010 Final Year Research Project (Project ID: J26-IT-342). 
 
-The system combines multiple environmental, social, and historical hazard information sources to provide reliable hazard forecasting, risk awareness, and personalized recommendations. The platform addresses the limitations of traditional hazard forecasting systems by incorporating reliability-aware data fusion, social hazard intelligence, machine learning forecasting, and user-centric recommendation generation.
-
-The system is designed to support travellers, hikers, outdoor enthusiasts, local authorities, and the general public by providing timely environmental risk insights and adaptive recommendations.
+Hiking and nature-based tourism in Sri Lanka is rapidly growing, yet existing systems primarily provide static trail information and basic navigation. Venture addresses these limitations by supporting the entire hiking lifecycle—from pre-hike planning and environmental awareness to real-time monitoring and emergency response. The platform integrates user preferences, environmental intelligence, physiological monitoring, and emergency response into a unified, modular decision-support system to enhance safety, experience quality, and real-time decision-making for hikers.
 
 ---
 
 # Problem Statement
 
-Traditional environmental hazard forecasting systems primarily rely on environmental sensor data and weather observations. However, they often overlook valuable information present in social media discussions, public reports, and community observations.
+Existing hiking and outdoor tourism support systems focus heavily on navigation, trail discovery, and basic user reviews. They remain largely static, offering limited personalization and minimal consideration of real-time environmental risks or user physiological states. 
 
-Additionally, different information sources vary significantly in reliability and quality. As a result, hazard warnings generated from multiple sources may contain uncertainty and inconsistencies.
-
-This research aims to develop a reliability-aware multi-source forecasting system capable of:
-
-- Integrating environmental and social information sources
-- Assessing source credibility
-- Detecting emerging hazard signals
-- Generating adaptive hazard forecasts
-- Providing actionable recommendations through a mobile application
+Furthermore, explainability is largely missing, making it difficult for users to understand why recommendations or risk predictions are generated. The lack of integrated multi-modal AI systems that combine recommendation, hazard prediction, health monitoring, and emergency response leads to safety risks and poor decision-making, especially for inexperienced users unfamiliar with local Sri Lankan terrain.
 
 ---
 
 # Research Objectives
 
 ## Main Objective
-
-Develop an adaptive multi-source environmental hazard forecasting and recommendation system that combines environmental data, historical hazard records, and social intelligence using reliability-aware data fusion techniques.
+To develop an Explainable Multi-modal AI framework for personalized, risk-aware hiking recommendation and adventure optimization in Sri Lanka, capable of integrating user preferences, environmental intelligence, physiological monitoring, and emergency response into a unified yet modular decision-support system.
 
 ## Specific Objectives
 
-### Objective 01
+### Objective 01 (Component 1)
+Develop an explainable personalized hiking trail recommendation system using hybrid filtering, multi-output ML models (XGBoost/SHAP), and live NLP sentiment analysis for offline-resilient planning.
 
-Collect, process, and integrate environmental and historical hazard datasets.
+### Objective 02 (Component 2)
+Develop an environmental and social hazard forecasting system by fusing meteorological data with NLP-extracted social media and news signals.
 
-### Objective 02
+### Objective 03 (Component 3)
+Develop a multimodal physiological and performance monitoring system using deep learning to predict fatigue, dehydration, and physical strain in real-time.
 
-Develop an adaptive reliability-aware data fusion framework to improve forecasting accuracy.
-
-### Objective 03
-
-Analyze social media and public reports to identify emerging environmental hazards.
-
-### Objective 04
-
-Generate intelligent recommendations and visualizations to support user decision-making.
+### Objective 04 (Component 4)
+Develop a context-aware emergency detection and response recommendation system to provide actionable evacuation strategies and rescue guidance.
 
 ---
 
 # Research Components
 
-## Component 01 – Environmental Data Processing Module
+## Component 01 – Pre-Hike Explainable Trail Recommendation Engine
+**Developer:** Athulathmudali A.U.N. (IT23156456)
 
 ### Responsibilities
-
-- Weather data collection
-- Environmental feature generation
-- Historical data integration
-- Environmental risk extraction
-- Data preprocessing
+- Collect user demographic and preference data via structured questionnaires.
+- Build a hiking trail dataset mapping difficulty, distance, elevation, and scenic attributes.
+- Train multi-output ML models (XGBoost) to predict suitability, enjoyment, and completion probability.
+- Generate explainable outputs using SHAP/LIME for recommendation justification.
+- Extract real-time social sentiment and hazard penalties using NLP (VADER) from Reddit and Google News feeds.
+- Implement server-side caching (`SOCIAL_CACHE`) and on-device offline storage (`shared_preferences`) for resilient access during hikes.
 
 ### Inputs
-
-- Rainfall
-- Temperature
-- Humidity
-- Wind Speed
-- Atmospheric Pressure
+- User & Profile Data (Demographics, Fitness level, Preferences, Historical ratings)
+- Trail Attributes (Distance, Elevation, Terrain, Difficulty)
+- Live Web Feeds (Reddit, Google News RSS)
 
 ### Outputs
-
-- Environmental Feature Set
-- Risk Indicators
+- Top-N Personalized Trail Recommendations
+- Suitability Score, Enjoyment Level, and Completion Probability
+- Explainable AI Justifications (SHAP)
+- Social Metadata (Sentiment Score, Hazard Penalties, Crowd Levels)
 
 ---
 
-## Component 02 – Adaptive Reliability-Aware Multi-Source Fusion Module
+## Component 02 – Environmental and Social Hazard Forecasting System
+**Developer:** Karunarathne K.D.N.S. (IT23259584)
 
 ### Responsibilities
-
-- Reliability assessment
-- Credibility scoring
-- Confidence estimation
-- Dynamic weighting
-- Multi-source information fusion
-- Hazard forecasting
+- Collect weather, terrain, and historical disaster data.
+- Scrape social media, news, and review-based hazard indicators.
+- Apply NLP models (BERT/topic modeling) for hazard extraction.
+- Train ML/Deep Learning models for hazard probability and trend forecasting.
 
 ### Inputs
-
-- Environmental features
-- Social signals
-- Hazard history
+- Environmental Data (Weather API, Terrain/Elevation, Sensors, Disaster history)
+- Social & Crowd Data (Social media posts, News & reports, Crowdsourced info)
 
 ### Outputs
-
-- Reliability scores
-- Fused risk vectors
-- Hazard predictions
+- Environmental Risk Alerts (Hazard type, Risk probability, Risk trend, Risk heat map)
 
 ---
 
-## Component 03 – Social Hazard Intelligence Module
+## Component 03 – Multimodal Physiological and Performance Monitoring System
+**Developer:** Kariyawasam K.L.A.N. (IT23366718)
 
 ### Responsibilities
-
-- Social data collection
-- NLP analysis
-- Hazard signal detection
-- Topic modelling
-- Information extraction
+- Acquire and preprocess multimodal wearable sensor datasets.
+- Develop deep learning models (LSTM/Transformer fusion) for time-series data.
+- Predict fatigue, dehydration, and physical strain levels.
+- Generate real-time safety alerts based on physiological thresholds.
 
 ### Inputs
-
-- Social media content
-- News articles
-- Community reports
+- Physiological & Context Data (Heart rate, Accelerometer, GPS/Location, Temperature, Humidity)
 
 ### Outputs
-
-- Hazard indicators
-- Social risk signals
-- Confidence scores
+- Physiological Health Insights (Fatigue level, Dehydration risk, Physical strain index, Safety alerts)
 
 ---
 
-## Component 04 – Recommendation and Visualization Module
+## Component 04 – Context-Aware Emergency Detection and Response Recommendation System
+**Developer:** Mihiranga U.G.P.G. (IT23309142)
 
 ### Responsibilities
+- Collect historical accident and emergency datasets.
+- Build multi-class classification models for emergency identification.
+- Estimate severity and rescue urgency levels of incidents.
+- Develop an explainable AI response recommendation engine.
 
-- Recommendation generation
-- Risk communication
-- Hazard visualization
-- User support features
-- Interactive heatmaps
+### Inputs
+- Incident & Resource Data (Incident reports, Rescue resources, Hospital locations, Road & terrain data)
 
 ### Outputs
-
-- Personalised recommendations
-- Safety alerts
-- Visual analytics
-- Risk maps
+- Emergency Response Guidance (Emergency severity, Rescue urgency, Evacuation strategy, Nearest resources, Recommended actions)
 
 ---
 
 # End-to-End System Workflow
 
 ```text
-Environmental Data Sources
+USER & ENVIRONMENT INPUTS
             │
             ▼
-
-Data Collection Layer
-
-            │
-            ▼
-
-Data Preprocessing Layer
-
-            │
-
- ┌──────────┴──────────┐
-
- ▼                     ▼
-
-Component 01     Component 03
-Environmental    Social Hazard
-Processing       Detection
-
-        │         │
-
-        └────┬────┘
-
-             ▼
-
-Component 02
-Reliability Assessment
-
-             ▼
-
-Adaptive Data Fusion
-
-             ▼
-
-Hazard Prediction Engine
-
-             ▼
-
-Component 04
-Recommendation Engine
-
-             ▼
-
-PostgreSQL Storage
-
-             ▼
-
-FastAPI APIs
-
-             ▼
-
-React Native Mobile App
-
-             ▼
-
-User Dashboard & Heatmaps
+┌─────────────────────────────────────────────────────────┐
+│            PROPOSED SYSTEM (MODULAR AI)                 │
+│                                                         │
+│  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐ │
+│  │ Component 01 │   │ Component 02 │   │ Component 03 │ │
+│  │ Trail Recomm.│   │ Hazard Fcst. │   │ Physio Mon.  │ │
+│  └──────┬───────┘   └──────┬───────┘   └──────┬───────┘ │
+│         │                  │                  │         │
+│         └─────────┬────────┴────────┬─────────┘         │
+│                   ▼                 ▼                   │
+│              DATA FUSION & CONTEXT INTEGRATION          │
+│                                                         │
+│                       ┌──────────────┐                  │
+│                       │ Component 04 │                  │
+│                       │ Emergency Rec│                  │
+│                       └──────┬───────┘                  │
+│                              │                          │
+│             EXPLAINABILITY & TRANSPARENCY LAYER (XAI)   │
+└─────────────────────────────┬───────────────────────────┘
+                              ▼
+                     UNIFIED DASHBOARDS
+        (Recommendations, Alerts, Evacuation Guidance)
 ```
 
 ---
@@ -215,51 +150,46 @@ User Dashboard & Heatmaps
 # Technology Stack
 
 ## Mobile Application
-
 - React Native
-- Expo
-- TypeScript
-- Axios
-- React Navigation
-- React Native Maps
 
 ## Backend
-
-- FastAPI
-- Python
-- SQLAlchemy
-- Pydantic
-
-## Database
-
+- FastAPI (Python)
 - PostgreSQL
-- PostGIS (Planned)
 
-## Machine Learning
+## Machine Learning & AI
+- **Component 01:** XGBoost, Collaborative Filtering, SHAP/LIME, VADER NLP
+- **Component 02:** BERT, Topic Modeling, Scikit-Learn
+- **Component 03:** LSTM, Transformer Fusion Architectures
+- **Component 04:** Multi-class Classification, Rule-based Reasoning
 
-- Scikit-Learn
-- XGBoost
-- LightGBM
-- PyTorch
-- Transformers (BERT)
+---
 
-## Data Processing
+# Database Design
 
-- Pandas
-- NumPy
-- NLTK
-- SpaCy
+## Component 01
+- `users`
+- `user_profile`
+- `trails`
+- `recommendations`
 
-## Visualization
+## [To be updated by Component Owners]
+- `[Placeholder for Component 02 Tables]`
+- `[Placeholder for Component 03 Tables]`
+- `[Placeholder for Component 04 Tables]`
 
-- Leaflet
-- OpenStreetMap
-- Recharts
+---
 
-## Version Control
+# API Modules
 
-- Git
-- GitHub
+## Component 01
+- `GET /profile`
+- `POST /recommend`
+- `POST /sync-fitness-model`
+
+## [To be updated by Component Owners]
+- `[Placeholder for Component 02 APIs]`
+- `[Placeholder for Component 03 APIs]`
+- `[Placeholder for Component 04 APIs]`
 
 ---
 
@@ -267,232 +197,39 @@ User Dashboard & Heatmaps
 
 ```text
 J26-IT-342
-
-├── frontend/
-│   └── venture_mobileApp/
-│
-├── backend/
-│
 ├── ML_models/
-│   ├── component_1/
-│   ├── component_2/
-│   ├── component_3/
-│   ├── component_4/
-│   └── shared/
-│
-├── datasets/
-│   ├── raw/
-│   ├── processed/
-│   └── final/
-│
+│   ├── component01/
+│   ├── component02/
+│   ├── component03/
+│   └── component04/
+├── backend/
 ├── database/
-│   ├── schema/
-│   ├── seed_data/
-│   └── backups/
-│
+├── datasets/
 ├── deployment/
-│
 ├── docs/
-│
+├── frontend/
+│   └── venture_mobileapp/
+│       ├── android/
+│       ├── ios/
+│       ├── lib/
+│       ├── linux/
+│       └── macos/
 ├── tests/
-│
 └── README.md
-```
-
----
-
-# Database Design
-
-## Core Tables
-
-```text
-users
-
-weather_data
-
-social_data
-
-hazard_history
-
-processed_weather
-
-processed_social
-
-reliability_scores
-
-fusion_results
-
-prediction_results
-
-recommendations
-
-alerts
-```
-
----
-
-# API Modules
-
-## Weather API
-
-```http
-GET /weather
-```
-
-## Social Analysis API
-
-```http
-POST /analyze-social
-```
-
-## Reliability API
-
-```http
-POST /reliability
-```
-
-## Forecast API
-
-```http
-POST /predict
-```
-
-## Recommendation API
-
-```http
-GET /recommendation
-```
-
-## Dashboard API
-
-```http
-GET /dashboard
-```
-
----
-
-# Development Workflow
-
-## Branching Strategy
-
-### Main
-
-```text
-main
-```
-
-Stable codebase.
-
-### Development
-
-```text
-develop
-```
-
-System integration.
-
-### Component Branches
-
-```text
-feature/component-1
-feature/component-2
-feature/component-3
-feature/component-4
-```
-
-Individual development branches.
-
----
-
-# Setup Instructions
-
-## Clone Repository
-
-```bash
-git clone <repository-url>
-```
-
-```bash
-cd J26-IT-342
-```
-
----
-
-## Backend Setup
-
-```bash
-cd backend
-
-python -m venv venv
-
-venv\Scripts\activate
-
-pip install -r requirements.txt
-
-uvicorn main:app --reload
-```
-
-Swagger Documentation:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
----
-
-## Mobile Setup
-
-```bash
-cd frontend/venture_mobileApp
-
-npm install
-
-npx expo start
 ```
 
 ---
 
 # Current Development Status
 
-## Completed
-
-- Repository Initialization
-- React Native Setup
-- FastAPI Setup
-- Development Environment Configuration
-- GitHub Integration
-
 ## Ongoing
-
-- Dataset Collection
-- PostgreSQL Integration
-- API Development
-- Model Development
-- Mobile Interface Development
-- Component Integration
-
----
-
-# Expected Outcomes
-
-The final system will provide:
-
-- Environmental hazard forecasting
-- Social hazard intelligence
-- Reliability-aware risk predictions
-- Adaptive multi-source information fusion
-- Personalized recommendations
-- Interactive mobile visualizations
-- Real-time situational awareness
+- ML Models training completed.
+- Currently integrating the finalized Machine Learning models with the React Native Mobile App via API.
 
 ---
 
 # Academic Context
-
-This project is developed as part of the IT342 Research and Development Project and follows the proposed architecture, objectives, and deliverables specified within the approved research proposal and Technical Assessment Form (TAF).
-
----
+This research project belongs to the Centre of Excellence for AI (COEAI) under the Information Technology (IT) specialization at SLIIT. The system is designed to support SDGs such as Good Health and Well-being (SDG 3), Industry, Innovation and Infrastructure (SDG 9), and Sustainable Cities and Communities (SDG 11).
 
 # License
-
-This repository is intended solely for academic and research purposes.
+This repository is intended solely for academic and research purposes at SLIIT University.
